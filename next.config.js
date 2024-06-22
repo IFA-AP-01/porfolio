@@ -11,6 +11,8 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
+  output: "export",
+  reactStrictMode: true,
 };
 
 module.exports = nextConfig;
