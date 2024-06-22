@@ -77,7 +77,7 @@ export default function Member({
           object-cover
           transition-all
           hover:scale-[1.15]
-          group-odd:right-[initial] group-odd:right-10
+          group-odd:right-[initial] group-odd:right-11
           rounded-full ring-2 ring-gray-300 dark:ring-gray-500 my-auto"
           src={imageUrl}
           alt="Bordered avatar"
