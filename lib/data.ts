@@ -3,6 +3,9 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact, FaAndroid, FaSwift } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
+import colorNoteImg from "@/public/colorNoteImg.png";
+import tiziImg from "@/public/tiziImg.png";
+import vtvImg from "@/public/colorNoteImg.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import flutterImg from "@/public/Flutter.png";
@@ -12,9 +15,9 @@ import KotlinImg from "@/public/Kotlin.png";
 import AppleImg from "@/public/Apple.png";
 import NextJsImg from "@/public/NextJs.png";
 import NestJsImg from "@/public/NestJs.png";
-import DevDungImg  from "@/public/DevDung.png";
-import ThangDevImg  from "@/public/ThangDev.jpg";
-import HuyDevImg  from "@/public/HuyDev.jpg";
+import DevDungImg from "@/public/DevDung.png";
+import ThangDevImg from "@/public/ThangDev.jpg";
+import HuyDevImg from "@/public/HuyDev.jpg";
 
 export const links = [
   {
@@ -45,25 +48,33 @@ export const links = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Tizi News",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Channel for buying and selling real estate, jobs, classifieds. Managed and operated by VNCT Investment and Trading Joint Stock Company. With the slogan "Find anything, get Tizi" until now, Tizi has optimized all categories to serve product searches and reviews, helping customers choose products at the best bargain prices. on the market.",
+    tags: [
+      "React",
+      "Next.js",
+      "MongoDB",
+      "Tailwind",
+      "Prisma",
+      "Android",
+      "Java",
+    ],
+    imageUrl: tiziImg,
   },
   {
-    title: "rmtDev",
+    title: "ColorNote",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "ColorNote is a simple yet powerful note-taking application that allows users to efficiently jot down and organize information.",
+      tags: ["Android", "Kotlin", "Github Action"],
+    imageUrl: colorNoteImg,
   },
   {
-    title: "Word Analytics",
+    title: "Vua Tiếng Việt",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "The application is an educational game designed to improve the Vietnamese language skills of players, arranges words based on shuffled characters, and your task is to arrange the characters so that the order of the meaningful word is correct",
+    tags: ["Android", "Kotlin", "Jetpack Compose", "Github Action"],
+    imageUrl: vtvImg,
   },
 ] as const;
 
