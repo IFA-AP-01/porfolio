@@ -5,7 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import colorNoteImg from "@/public/colorNoteImg.png";
 import tiziImg from "@/public/tiziImg.png";
-import vtvImg from "@/public/colorNoteImg.png";
+import vtvImg from "@/public/vtvImg.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import flutterImg from "@/public/Flutter.png";
@@ -51,15 +51,7 @@ export const projectsData = [
     title: "Tizi News",
     description:
       "Channel for buying and selling real estate, jobs, classifieds. Managed and operated by VNCT Investment and Trading Joint Stock Company.",
-    tags: [
-      "React",
-      "Next.js",
-      "MongoDB",
-      "Tailwind",
-      "Prisma",
-      "Android",
-      "Java",
-    ],
+    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Android", "Java"],
     imageUrl: tiziImg,
   },
   {
