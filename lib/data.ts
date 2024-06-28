@@ -2,12 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact, FaAndroid, FaSwift } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
 import colorNoteImg from "@/public/colorNoteImg.png";
 import tiziImg from "@/public/tiziImg.png";
 import vtvImg from "@/public/vtvImg.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import sarlangKoreanImg from "@/public/vtvImg.png";
 import flutterImg from "@/public/Flutter.png";
 import AndroidImg from "@/public/Android.png";
 import SwiftImg from "@/public/Swift.png";
@@ -67,6 +65,13 @@ export const projectsData = [
       "The application is an educational game designed to improve the Vietnamese language skills of players, arranges words based on shuffled characters.",
     tags: ["Android", "Kotlin", "Jetpack Compose", "Github Action"],
     imageUrl: vtvImg,
+  },
+  {
+    title: "Sarlang Korean",
+    description:
+      "Korean language learning app that enhances skills through effective lessons in dialogues, sentences, knowledge tests, and speaking practice.",
+    tags: ["Android", "Kotlin", "Github Action", "CMake"],
+    imageUrl: sarlangKoreanImg,
   },
 ] as const;
 
