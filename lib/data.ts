@@ -50,7 +50,7 @@ export const projectsData = [
   {
     title: "Tizi News",
     description:
-      "Channel for buying and selling real estate, jobs, classifieds. Managed and operated by VNCT Investment and Trading Joint Stock Company. With the slogan "Find anything, get Tizi" until now, Tizi has optimized all categories to serve product searches and reviews, helping customers choose products at the best bargain prices. on the market.",
+      "Channel for buying and selling real estate, jobs, classifieds. Managed and operated by VNCT Investment and Trading Joint Stock Company. With the slogan `Find anything, get Tizi` until now, Tizi has optimized all categories to serve product searches and reviews, helping customers choose products at the best bargain prices. on the market.",
     tags: [
       "React",
       "Next.js",
@@ -66,7 +66,7 @@ export const projectsData = [
     title: "ColorNote",
     description:
       "ColorNote is a simple yet powerful note-taking application that allows users to efficiently jot down and organize information.",
-      tags: ["Android", "Kotlin", "Github Action"],
+    tags: ["Android", "Kotlin", "Github Action"],
     imageUrl: colorNoteImg,
   },
   {
