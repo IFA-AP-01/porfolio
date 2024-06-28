@@ -70,7 +70,7 @@ export const projectsData = [
     imageUrl: colorNoteImg,
   },
   {
-    title: "Vua Tiếng Việt",
+    title: "King Of Vietnamese",
     description:
       "The application is an educational game designed to improve the Vietnamese language skills of players, arranges words based on shuffled characters.",
     tags: ["Android", "Kotlin", "Jetpack Compose", "Github Action"],
