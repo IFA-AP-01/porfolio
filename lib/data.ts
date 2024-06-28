@@ -5,7 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import colorNoteImg from "@/public/colorNoteImg.png";
 import tiziImg from "@/public/tiziImg.png";
 import vtvImg from "@/public/vtvImg.png";
-import sarlangKoreanImg from "@/public/vtvImg.png";
+import sarlangKoreanImg from "@/public/sarlangKoreanImg.png";
 import flutterImg from "@/public/Flutter.png";
 import AndroidImg from "@/public/Android.png";
 import SwiftImg from "@/public/Swift.png";
