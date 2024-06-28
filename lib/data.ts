@@ -50,7 +50,7 @@ export const projectsData = [
   {
     title: "Tizi News",
     description:
-      "Channel for buying and selling real estate, jobs, classifieds. Managed and operated by VNCT Investment and Trading Joint Stock Company. With the slogan `Find anything, get Tizi` until now, Tizi has optimized all categories to serve product searches and reviews, helping customers choose products at the best bargain prices. on the market.",
+      "Channel for buying and selling real estate, jobs, classifieds. Managed and operated by VNCT Investment and Trading Joint Stock Company.",
     tags: [
       "React",
       "Next.js",
@@ -72,7 +72,7 @@ export const projectsData = [
   {
     title: "Vua Tiếng Việt",
     description:
-      "The application is an educational game designed to improve the Vietnamese language skills of players, arranges words based on shuffled characters, and your task is to arrange the characters so that the order of the meaningful word is correct",
+      "The application is an educational game designed to improve the Vietnamese language skills of players, arranges words based on shuffled characters.",
     tags: ["Android", "Kotlin", "Jetpack Compose", "Github Action"],
     imageUrl: vtvImg,
   },
