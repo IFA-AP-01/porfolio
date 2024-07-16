@@ -73,6 +73,20 @@ export const projectsData = [
     tags: ["Android", "Kotlin", "Github Action", "CMake"],
     imageUrl: sarlangKoreanImg,
   },
+  {
+    title: "Task Management",
+    description:
+      "A Task Management App will help users easily manage their daily tasks, ensuring they don't miss any important assignments.",
+    tags: ["iOS", "SwiftUI", "Github Action", "CoreData"],
+    imageUrl: taskManagementImg,
+  },
+  {
+    title: "My Journal",
+    description:
+      "A MyJournalImg app will help users easily and intuitively record and manage their trips, while also preserving memorable moments and planning for future journeys.",
+    tags: ["iOS", "SwiftUI", "Github Action", "CoreData"],
+    imageUrl: MyJournalImg,
+  },
 ] as const;
 
 export const membersData = [
@@ -111,6 +125,8 @@ export const skillsData = [
   "Tailwind",
   "Prisma",
   "MongoDB",
+  "FireBase",
+  "MySQL",
   "Redux",
   "GraphQL",
   "Apollo",
@@ -118,5 +134,9 @@ export const skillsData = [
   "PostgreSQL",
   "Python",
   "Django",
+  "Kotlin",
+  "Swift",
+  "Flutter",
+  "Framer Motion",
   "Framer Motion",
 ] as const;
