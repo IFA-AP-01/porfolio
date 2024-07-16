@@ -138,5 +138,4 @@ export const skillsData = [
   "Swift",
   "Flutter",
   "Framer Motion",
-  "Framer Motion",
 ] as const;
