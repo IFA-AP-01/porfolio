@@ -6,6 +6,8 @@ import colorNoteImg from "@/public/colorNoteImg.png";
 import tiziImg from "@/public/tiziImg.png";
 import vtvImg from "@/public/vtvImg.png";
 import sarlangKoreanImg from "@/public/sarlangKoreanImg.png";
+import taskManagementImg from "@/public/taskManagementImg.png"
+import myJournalImg from "@/public/MyJournalImg.png"
 import flutterImg from "@/public/Flutter.png";
 import AndroidImg from "@/public/Android.png";
 import SwiftImg from "@/public/Swift.png";
@@ -83,9 +85,9 @@ export const projectsData = [
   {
     title: "My Journal",
     description:
-      "A MyJournalImg app will help users easily and intuitively record and manage their trips, while also preserving memorable moments and planning for future journeys.",
+      "A MyJournal app will help users easily and intuitively record and manage their trips, while also preserving memorable moments and planning for future journeys.",
     tags: ["iOS", "SwiftUI", "Github Action", "CoreData"],
-    imageUrl: MyJournalImg,
+    imageUrl: myJournalImg,
   },
 ] as const;
 
