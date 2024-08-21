@@ -109,7 +109,7 @@ export const membersData = [
   {
     title: "Huynh Ngoc Huy",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+      "Experienced in developing high-performance applications with a focus on following best practices. Participated in projects related to e-commerce, social networks, chat, and work reservations.",
     tags: [AndroidImg, KotlinImg, flutterImg, NestJsImg, NextJsImg],
     imageUrl: HuyDevImg,
   },
