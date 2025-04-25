@@ -18,12 +18,12 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About IFA team</SectionHeading>
+      <SectionHeading>About</SectionHeading>
       <p className="mb-3"></p>
-      <h2 className="font-bold text-xl text-center">
+      <h3 className="font-bold text-md text-center">
         Welcome! We are a dedicated team specializing in developing high-quality
         applications and solutions across various platforms.
-      </h2>{" "}
+      </h3>{" "}
       <ul className="mt-8  list-disc">
         <li>
           We are developers with 3 to 5 years of experience in developing
@@ -44,7 +44,7 @@ export default function About() {
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800 mt-4">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
+            className="bg-white borderBlack rounded-md px-5 py-2 dark:bg-white/10 dark:text-white/80 text-sm"
             key={index}
             initial="initial"
             whileInView="animate"

@@ -6,6 +6,7 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -14,18 +15,18 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
+        className="fixed bottom-8 left-1/2 h-16 w-[90%] max-w-[20rem] rounded-full border border-white border-opacity-40 bg-white bg-opacity-85 shadow-lg  backdrop-blur-[0.5rem] sm:bottom-6 sm:h-16 sm:w-[90%] sm:max-w-[36rem] dark:border-black/40 dark:bg-black dark:bg-opacity-85"
+        initial={{ y: 100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+      <nav className="fixed bottom-8 left-1/2 flex h-16 w-[90%] max-w-[20rem] -translate-x-1/2 items-center justify-center sm:bottom-6 sm:h-16 sm:w-[90%] sm:max-w-[36rem]">
+        <ul className="flex w-full items-center justify-evenly gap-2 px-6 text-[0.9rem] font-medium text-gray-500 sm:gap-6 sm:px-6 sm:flex-nowrap sm:justify-center">
           {links.map((link) => (
             <motion.li
-              className="h-3/4 flex items-center justify-center relative"
+              className="h-4/4 flex items-center justify-center relative"
               key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
+              initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
@@ -42,7 +43,10 @@ export default function Header() {
                   setTimeOfLastClick(Date.now());
                 }}
               >
-                {link.name}
+                <span className="sm:hidden">
+                  <FontAwesomeIcon icon={link.icon} />
+                </span>
+                <span className="hidden sm:inline">{link.name}</span>
 
                 {link.name === activeSection && (
                   <motion.span
