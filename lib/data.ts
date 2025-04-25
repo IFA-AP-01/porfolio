@@ -16,7 +16,6 @@ import ThangDevImg from "@/public/ThangDev.jpg";
 import HuyDevImg from "@/public/HuyDev.jpg";
 import woocommerceImg from "@/public/woocommerce.png";
 import wordpressImg from "@/public/wordpress.png";
-import { time } from 'console';
 
 export const links = [
   {
