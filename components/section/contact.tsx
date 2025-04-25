@@ -33,7 +33,10 @@ export default function Contact() {
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact us directly at{" "}
-        <a className="font-bold text-[#0080ff]" href="mailto:ifa.mobileteam@gmail.com">
+        <a
+          className="font-bold text-[#0080ff]"
+          href="mailto:ifa.mobileteam@gmail.com"
+        >
           ifa.mobileteam@gmail.com
         </a>{" "}
         or through this form.
@@ -45,8 +48,8 @@ export default function Contact() {
           const { data, error } = await sendEmail(formData);
 
           if (error) {
-        toast.error(error);
-        return;
+            toast.error(error);
+            return;
           }
 
           toast.success("Email sent successfully!");

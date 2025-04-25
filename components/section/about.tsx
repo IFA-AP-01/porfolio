@@ -21,8 +21,8 @@ export default function About() {
       <SectionHeading>About</SectionHeading>
       <p className="mb-3"></p>
       <h3 className="font-bold text-sm sm:text-md text-center">
-        Welcome! We are a dedicated team specializing in developing high-quality
-        applications and solutions across various platforms.
+      💥 Welcome! We are a dedicated team specializing in developing high-quality
+        applications and solutions across various platforms. 😊😊
       </h3>{" "}
       <ul className="mt-8 list-disc text-sm text-gray-800 dark:text-white/80">
         <li>
@@ -33,7 +33,7 @@ export default function About() {
         </li>
         <li>
           We have experience working with marketing and design teams to optimize
-          products for end users.
+          products for end users. 
         </li>
         <li>
           Passionate about exploring and catching up with new technology trends,

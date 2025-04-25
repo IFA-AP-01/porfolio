@@ -9,6 +9,7 @@ type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
   title,
+  timeline,
   description,
   tags,
   imageUrl,
@@ -31,16 +32,19 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-4 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-4 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+      <section className="bg-gray-100 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-4 relative sm:h-[20rem] hover:bg-gray-100 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[40%] flex flex-col h-full sm:group-even:ml-[25rem]">
           <h3 className="text-xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 text-sm">
+          <p className="font-bold mt-2 leading-relaxed text-gray-900 dark:text-white/90 text-xs">
+            {timeline}
+          </p>
+          <p className="mt-2 leading-relaxed text-gray-600 dark:text-white/60 text-sm">
             {description}
           </p>
           <ul className="flex flex-wrap mt-4 gap-1 sm:mt-auto">
         {tags.map((tag, index) => (
           <li
-            className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-md dark:text-white/70"
+            className="bg-[#e5e5e5] text-gray-600 dark:bg-black/[0.8] px-3 py-1 text-[0.7rem] tracking-wider text-white rounded-md dark:text-white/70"
             key={index}
           >
             {tag}

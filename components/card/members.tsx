@@ -49,27 +49,13 @@ export default function Member({
             {tags.map((tag, index) => (
               <li key={index} className="transition hover:scale-[1.15]">
                 <Image
-                  className="m-1 w-10 h-10 border-2 rounded-full bg-white dark:bg-gray-600"
+                  className="m-1 w-10 h-10 rounded-full bg-white dark:bg-gray-600"
                   src={tag}
                   alt=""
                 />
               </li>
             ))}
           </ul>
-          <div className="flex flex-row space-x-4">
-            <button
-              type="button"
-              className="text-sm mt-3 w-28 h-8 bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
-            >
-              Resume
-            </button>
-            <button
-              type="button"
-              className="text-sm mt-3 w-36 h-8 bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
-            >
-              Profile
-            </button>
-          </div>
         </div>
 
         <Image

@@ -16,6 +16,7 @@ import ThangDevImg from "@/public/ThangDev.jpg";
 import HuyDevImg from "@/public/HuyDev.jpg";
 import woocommerceImg from "@/public/woocommerce.png";
 import wordpressImg from "@/public/wordpress.png";
+import { time } from 'console';
 
 export const links = [
   {
@@ -53,6 +54,7 @@ export const links = [
 export const projectsData = [
   {
     title: "Live Speaker",
+    timeline: "Jan 2025 - Present",
     description:
       "Discover Livespeaker, the innovative voice translation tool that facilitates multilingual communication.",
     tags: ["Kotlin", "KMP", "Firebase", "Deepgram", "Gemini"],
@@ -61,14 +63,16 @@ export const projectsData = [
   },
   {
     title: "Aardwolf India",
+    timeline: "March 2025 - April 2025",
     description:
       "Aardwolf manufactures material handling equipment for the stone, glass and metal industries. ",
     tags: ["Wordpress", "PHP", "Elementor", "Woocomerce"],
     imageUrl: aardwolfImg,
-    videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745581016/Aardwolf_India_spzjiy.mp4",
+    videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745602203/aardwolf-india_ibetbw.mp4",
   },
   {
     title: "Tizi News",
+    timeline: "March 2021 - June 2021",
     description:
       "Channel for buying and selling real estate, jobs, classifieds. Managed and operated by VNCT Investment and Trading Joint Stock Company.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Android", "Java"],
@@ -76,7 +80,17 @@ export const projectsData = [
     videoUrl: "",
   },
   {
+    title: "Battery Meter",
+    timeline: "Sep 2024 - Nov 2024",
+    description:
+      "A lightweight application designed to monitor the battery status of a device, providing real-time updates on battery health.",
+    tags: ["Android", "Kotlin", "Jetpack Compose", "Github Action"],
+    imageUrl: tiziImg,
+    videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745601050/battery-meter_bff18q.mp4",
+  },
+  {
     title: "ColorNote",
+    timeline: "Aug 2021 - Oct 2021",
     description:
       "ColorNote is a simple yet powerful note-taking application that allows users to efficiently jot down and organize information.",
     tags: ["Android", "Kotlin", "Github Action"],
@@ -85,6 +99,7 @@ export const projectsData = [
   },
   {
     title: "King Of Vietnamese",
+    timeline: "Jan 2023 - March 2023",
     description:
       "The application is an educational game designed to improve the Vietnamese language skills of players, arranges words based on shuffled characters.",
     tags: ["Android", "Kotlin", "Jetpack Compose", "Github Action"],
