@@ -15,11 +15,6 @@ const font = Inter({
   display: "swap",
 });
 
-export const metadata = {
-  title: "IFA team",
-  description: "Full-stack Mobile Developers.",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -27,11 +22,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
+      <head>
+        <meta name="theme-color" content="#f5f5f5" />
+      </head>
       <body
-        className={`${font.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-[#131313] dark:text-gray-50 dark:text-opacity-90`}
+        className={`${font.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-[#131313] dark:text-gray-50 dark:text-opacity-90 transition-colors duration-300`}
       >
-        <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
-        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
+        <div className="bg-gradient-to-r from-[#fbc2eb] to-[#a6c1ee] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:from-[#654ea3] dark:to-[#eaafc8] transition-colors duration-300"></div>
+        <div className="bg-gradient-to-r from-[#ffecd2] to-[#fcb69f] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:from-[#2a2a3a] dark:to-[#4a3b5b] transition-colors duration-300"></div>
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

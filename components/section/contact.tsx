@@ -4,7 +4,7 @@ import React from "react";
 import SectionHeading from "../section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-// import { sendEmail } from "@/actions/sendEmail";
+import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "../submit-btn";
 import toast from "react-hot-toast";
 
@@ -32,8 +32,8 @@ export default function Contact() {
       <SectionHeading>Contact us</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
+        Please contact us directly at{" "}
+        <a className="font-bold text-[#0080ff]" href="mailto:ifa.mobileteam@gmail.com">
           ifa.mobileteam@gmail.com
         </a>{" "}
         or through this form.
@@ -41,19 +41,19 @@ export default function Contact() {
 
       <form
         className="mt-10 flex flex-col dark:text-black"
-        // action={async (formData) => {
-        //   const { data, error } = await sendEmail(formData);
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
 
-        //   if (error) {
-        //     toast.error(error);
-        //     return;
-        //   }
+          if (error) {
+        toast.error(error);
+        return;
+          }
 
-        //   toast.success("Email sent successfully!");
-        // }}
+          toast.success("Email sent successfully!");
+        }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-20 dark:focus:bg-opacity-30 transition-all dark:outline-none resize-none"
           name="senderEmail"
           type="email"
           required
@@ -61,7 +61,7 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-20 dark:focus:bg-opacity-30 transition-all dark:outline-none resize-none"
           name="message"
           placeholder="Your message"
           required

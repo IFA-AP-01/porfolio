@@ -20,11 +20,11 @@ export default function About() {
     >
       <SectionHeading>About</SectionHeading>
       <p className="mb-3"></p>
-      <h3 className="font-bold text-md text-center">
+      <h3 className="font-bold text-sm sm:text-md text-center">
         Welcome! We are a dedicated team specializing in developing high-quality
         applications and solutions across various platforms.
       </h3>{" "}
-      <ul className="mt-8  list-disc">
+      <ul className="mt-8 list-disc text-sm text-gray-800 dark:text-white/80">
         <li>
           We are developers with 3 to 5 years of experience in developing
           applications on Android, iOS, Flutter, and websites. We have
@@ -40,7 +40,7 @@ export default function About() {
           and always experimenting with personal projects.
         </li>
       </ul>
-      <h3 className="font-bold mt-8">The technologies we used</h3>
+      <h3 className="font-bold mt-8 text-sm sm:text-md">The technologies we used</h3>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800 mt-4">
         {skillsData.map((skill, index) => (
           <motion.li

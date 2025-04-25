@@ -31,9 +31,9 @@ export default function Member({
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section className="flex flex-row items-center bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+      <section className="flex flex-row items-center bg-gray-100 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[70%] flex flex-col h-full">
-          <h3 className="text-2xl font-semibold">{title}</h3>
+          <h3 className="text-xl font-semibold">{title}</h3>
           <div className="block sm:hidden">
             <Image
               className="mt-2 w-[4rem] h-[4rem] rounded-full ring-2 ring-gray-300 dark:ring-gray-500 my-auto"
@@ -59,13 +59,13 @@ export default function Member({
           <div className="flex flex-row space-x-4">
             <button
               type="button"
-              className="mt-3 w-28 h-8 bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
+              className="text-sm mt-3 w-28 h-8 bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
             >
               Resume
             </button>
             <button
               type="button"
-              className="mt-3 w-36 h-8 bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
+              className="text-sm mt-3 w-36 h-8 bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
             >
               Profile
             </button>

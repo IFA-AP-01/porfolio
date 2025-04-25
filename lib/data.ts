@@ -2,9 +2,6 @@ import { faHome, faBook, faUsers, faFolder, faTools, faPhone } from '@fortawesom
 import colorNoteImg from "@/public/colorNoteImg.png";
 import tiziImg from "@/public/tiziImg.png";
 import vtvImg from "@/public/vtvImg.png";
-import sarlangKoreanImg from "@/public/sarlangKoreanImg.png";
-import taskManagementImg from "@/public/taskManagementImg.png";
-import myJournalImg from "@/public/MyJournalImg.png";
 import liveSpeakerImg from "@/public/liveSpeakerImg.png";
 import aardwolfImg from "@/public/aardwolfImg.png";
 import flutterImg from "@/public/Flutter.png";
@@ -18,6 +15,7 @@ import DevDungImg from "@/public/DevDung.png";
 import ThangDevImg from "@/public/ThangDev.jpg";
 import HuyDevImg from "@/public/HuyDev.jpg";
 import woocommerceImg from "@/public/woocommerce.png";
+import wordpressImg from "@/public/wordpress.png";
 
 export const links = [
   {
@@ -100,21 +98,21 @@ export const membersData = [
     title: "Le Duc Thang",
     description:
       "5+ years of in-depth experience in iOS application development. Participated in numerous projects requiring performance optimization and enhanced security.",
-    tags: [SwiftImg, flutterImg, AppleImg, woocommerceImg],
+    tags: [SwiftImg, flutterImg, AppleImg, wordpressImg, woocommerceImg],
     imageUrl: ThangDevImg,
   },
   {
     title: "Ho Ngoc Dung",
     description:
       "A mobile developer. Having 3+ years of experience and strong knowledge of Android/Kotlin, Flutter/Dart. Having extensive experience in publishing applications.",
-    tags: [flutterImg, AndroidImg, SwiftImg, KotlinImg, AppleImg, woocommerceImg],
+    tags: [flutterImg, AndroidImg, SwiftImg, KotlinImg, AppleImg, wordpressImg, woocommerceImg],
     imageUrl: DevDungImg,
   },
   {
     title: "Huynh Ngoc Huy",
     description:
       "Experienced in developing high-performance applications with a focus on following best practices. Participated in projects related to e-commerce, social networks, chat, and work reservations.",
-    tags: [AndroidImg, KotlinImg, flutterImg, NestJsImg, NextJsImg, woocommerceImg],
+    tags: [AndroidImg, KotlinImg, flutterImg, NestJsImg, NextJsImg, wordpressImg, woocommerceImg],
     imageUrl: HuyDevImg,
   },
 ] as const;

@@ -32,30 +32,31 @@ export default function Intro() {
               height="200"
               quality="95"
               priority={true}
-              className="h-36 w-36 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-36 w-36 rounded-full object-cover shadow-xl"
             />
           </div>
         </div>
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-10 sm:mt-2 px-1 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-      <span className="font-bold text-gray-700 dark:text-gray-200">Mobile and Web App Solution 👋</span>
+        <span className="font-bold text-gray-700 dark:text-gray-200">Hi, we're IFA Team👋</span>
       </motion.h1>
-      <span className="font-bold text-gray-500 dark:text-gray-200">🏢 Danang, Vietnam</span>
+      <span className="font-bold text-gray-500 dark:text-gray-200">Danang, Vietnam</span>
       <motion.h2
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-2xl text-gray-700 dark:text-gray-200"
+        className="mb-10 mt-4 sm:mt-2 px-4 text-md font-medium !leading-[1.5] sm:text-xl text-gray-700 dark:text-gray-200"
+        style={{ fontFamily: "Consolas, monospace" }}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <Typewriter
           options={{
-            strings: ["Software Developers.", "Mobile Consultants."],
-            autoStart: true,
-            loop: true,
+        strings: ["Software Developers.", "Mobile Consultants.", "Mobile and Web App Solution."],
+        autoStart: true,
+        loop: true,
           }}
         />
       </motion.h2>
@@ -70,13 +71,13 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 text-white text-sm px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact Us{" "}
+          Contact us{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
       </motion.div>
@@ -99,7 +100,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
+          href="https://github.com/IFA-AP-01"
           target="_blank"
         >
           <FaGithubSquare />

@@ -15,16 +15,19 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed bottom-8 left-1/2 h-16 w-[90%] max-w-[20rem] rounded-full border border-white border-opacity-40 bg-white bg-opacity-85 shadow-lg  backdrop-blur-[0.5rem] sm:bottom-6 sm:h-16 sm:w-[90%] sm:max-w-[36rem] dark:border-black/40 dark:bg-black dark:bg-opacity-85"
+        className="fixed bottom-8 left-1/2 h-16 w-[90%] max-w-[30rem] rounded-full border border-white border-opacity-40 bg-white bg-opacity-85 shadow-lg  backdrop-blur-[0.5rem] sm:bottom-6 sm:h-16 sm:w-[100%] sm:max-w-[36rem] dark:border-black/40 dark:bg-black dark:bg-opacity-85"
         initial={{ y: 100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <nav className="fixed bottom-8 left-1/2 flex h-16 w-[90%] max-w-[20rem] -translate-x-1/2 items-center justify-center sm:bottom-6 sm:h-16 sm:w-[90%] sm:max-w-[36rem]">
-        <ul className="flex w-full items-center justify-evenly gap-2 px-6 text-[0.9rem] font-medium text-gray-500 sm:gap-6 sm:px-6 sm:flex-nowrap sm:justify-center">
+      <nav
+        className="fixed bottom-8 left-1/2 flex h-16 w-[100%] max-w-[36rem] -translate-x-1/2 items-center justify-center sm:bottom-6 sm:h-16 sm:w-[100%] sm:max-w-[36rem]"
+        style={{ WebkitTapHighlightColor: "transparent" }}
+      >
+        <ul className="flex w-full items-center justify-evenly gap-1 px-6 text-[0.9rem] font-medium text-gray-500 sm:gap-2 sm:px-2 sm:flex-nowrap sm:justify-center">
           {links.map((link) => (
             <motion.li
-              className="h-4/4 flex items-center justify-center relative"
+              className="h-4/4 flex items-center justify-center relative px-1"
               key={link.hash}
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -33,7 +36,7 @@ export default function Header() {
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
                   {
-                    "text-gray-950 dark:text-gray-200":
+                    "text-gray-950 dark:text-gray-300":
                       activeSection === link.name,
                   }
                 )}
@@ -42,11 +45,15 @@ export default function Header() {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
+                style={{ WebkitTapHighlightColor: "transparent" }}
               >
                 <span className="sm:hidden">
                   <FontAwesomeIcon icon={link.icon} />
                 </span>
-                <span className="hidden sm:inline">{link.name}</span>
+                <span className="hidden sm:inline-flex items-center gap-2">
+                  {link.name === activeSection && (<FontAwesomeIcon icon={link.icon} />)}
+                  {link.name}
+                </span>
 
                 {link.name === activeSection && (
                   <motion.span
