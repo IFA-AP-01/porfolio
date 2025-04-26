@@ -6,6 +6,21 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { skillsData } from "@/lib/data";
 
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
+
+
 export default function About() {
   const { ref } = useSectionInView("About");
 
@@ -43,9 +58,10 @@ export default function About() {
       <h3 className="font-bold mt-8 text-sm sm:text-md">The technologies we used</h3>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800 mt-4">
         {skillsData.map((skill, index) => (
-          <motion.li
-            className="bg-white borderBlack rounded-md px-5 py-2 dark:bg-white/10 dark:text-white/80 text-sm"
+            <motion.li
+            className="bg-white borderBlack rounded-md text-sm px-5 py-2 dark:bg-white/10 dark:text-white/80 hover:bg-gray-100 dark:hover:bg-white/20 transition-colors"
             key={index}
+            variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{

@@ -31,7 +31,9 @@ export default function Skills() {
       className="mb-28 max-w-[75rem] mx-auto scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>What We Can Do</SectionHeading>
-      
+      <p className="text-gray-700 mb-8 dark:text-white/80 max-w-[36rem] text-center mx-auto text-sm sm:text-md">
+        We are a team of experienced developers with a passion for creating high-quality applications and solutions. 
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
         {skillsJob.map((skill, index) => (
           <motion.div
@@ -45,14 +47,14 @@ export default function Skills() {
             whileHover={{ y: -5 }}
           >
             <div className="flex flex-col h-full">
-              <div className="p-6 flex items-center justify-between">
+              <div className="p-4 flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="bg-blue-50 dark:bg-gray-900/30 p-1 rounded-lg mr-4">
                     <Image
                       src={skill.imageUrl}
                       alt={skill.title}
-                      width={90}
-                      height={90}
+                      width={100}
+                      height={100}
                       className="object-contain"
                     />
                   </div>

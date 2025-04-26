@@ -59,22 +59,26 @@ export default function Project({
             autoPlay
             loop
             muted
-            className="absolute hidden sm:block top-0 -right-0 w-[27rem] h-full object-cover
+            className="absolute hidden sm:block top-0 -right-0 w-[27rem] h-full rounded-lg object-cover
              transition 
               group-hover:scale-[1.05]
               group-even:right-[initial] group-even:-left-0"
+            controls={false}
+            disablePictureInPicture
+            onContextMenu={(e) => e.preventDefault()}
           />
         ) : (
           <Image
             src={imageUrl}
             alt="Project I worked on"
             quality={95}
-            className="absolute hidden sm:block top-10 -right-40 w-[36rem] rounded-t-lg shadow-2xl
+            className="absolute hidden sm:block top-0 -right-40 w-[36rem] rounded-lg h-full shadow-2xl object-cover object-top
               transition 
               group-hover:scale-[1.1]
               group-hover:-translate-x-3
               group-hover:translate-y-3
               group-hover:-rotate-2
+              group-hover:top-10
 
               group-even:group-hover:translate-x-3
               group-even:group-hover:translate-y-3
