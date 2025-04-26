@@ -38,7 +38,7 @@ export default function Skills() {
         {skillsJob.map((skill, index) => (
           <motion.div
             key={index}
-            className="relative overflow-hidden max-w-[25rem] bg-gray-50 rounded-lg border border-black/5 hover:shadow-xl transition-all duration-300 dark:bg-white/10"
+            className="relative overflow-hidden max-w-[25rem] bg-white rounded-lg hover:shadow-xl transition-all duration-300 dark:bg-white/10"
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"

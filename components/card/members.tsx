@@ -37,7 +37,7 @@ export default function Member({
         transition: { duration: 0.3 }
       }}
     >
-      <section className="flex flex-row items-center bg-gray-100 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+      <section className="flex flex-row items-center bg-white max-w-[50rem] rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-50 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         <motion.div 
           className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[70%] flex flex-col h-full"
           animate={{

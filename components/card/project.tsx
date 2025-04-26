@@ -32,7 +32,7 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-4 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden relative flex flex-col sm:flex-row sm:h-[20rem] hover:bg-gray-100 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+      <section className="bg-white max-w-[50rem] rounded-lg overflow-hidden relative flex flex-col sm:flex-row sm:h-[20rem] hover:bg-gray-100 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         {/* Media for mobile (at the top) */}
         {videoUrl ? (
           <video
@@ -40,7 +40,7 @@ export default function Project({
             autoPlay
             loop
             muted
-            className="w-full h-48 sm:hidden object-cover rounded-t-lg"
+            className="w-full h-48 sm:hidden object-cover rounded-t-lg object-top"
             controls={false}
             disablePictureInPicture
             onContextMenu={(e) => e.preventDefault()}
