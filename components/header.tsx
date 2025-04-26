@@ -27,13 +27,13 @@ export default function Header() {
         />
       </Link>
       <motion.div
-        className="fixed bottom-8 left-1/2 h-16 w-[90%] max-w-[30rem] rounded-full border border-gray-300 border-opacity-40 bg-white bg-opacity-70 shadow-lg backdrop-blur-[0.5rem] sm:bottom-6 sm:h-16 sm:w-[100%] sm:max-w-[36rem] dark:border-black/20 dark:bg-black/30 dark:bg-opacity-70"
+        className="fixed bottom-8 sm:top-4 left-1/2 h-16 w-[90%] max-w-[30rem] rounded-full border border-gray-300 border-opacity-40 bg-white bg-opacity-70 shadow-lg backdrop-blur-[0.5rem] sm:bottom-6 sm:h-16 sm:w-[100%] sm:max-w-[36rem] dark:border-black/20 dark:bg-black/30 dark:bg-opacity-70"
         initial={{ y: 100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
       <nav
-        className="fixed bottom-8 left-1/2 flex h-16 w-[100%] max-w-[36rem] -translate-x-1/2 items-center justify-center sm:bottom-6 sm:h-16 sm:w-[100%] sm:max-w-[36rem]"
+        className="fixed bottom-8 sm:top-4 left-1/2 flex h-16 w-[100%] max-w-[36rem] -translate-x-1/2 items-center justify-center sm:bottom-6 sm:h-16 sm:w-[100%] sm:max-w-[36rem]"
         style={{ WebkitTapHighlightColor: "transparent" }}
       >
         <ul className="flex w-full items-center justify-evenly gap-1 px-6 text-[0.9rem] font-medium text-gray-500 sm:gap-2 sm:px-2 sm:flex-nowrap sm:justify-center">
@@ -71,7 +71,7 @@ export default function Header() {
 
                 {link.name === activeSection && (
                   <motion.span
-                    className="bg-gray-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-500"
+                    className="bg-black/10 rounded-full absolute inset-0 -z-10 dark:bg-white/10"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",

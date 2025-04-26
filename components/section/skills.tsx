@@ -30,7 +30,7 @@ export default function Skills() {
       ref={ref}
       className="mb-28 max-w-[75rem] mx-auto scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>What We Can Do</SectionHeading>
+      <SectionHeading>What We Do?</SectionHeading>
       <p className="text-gray-700 mb-8 dark:text-white/80 max-w-[36rem] text-center mx-auto text-sm sm:text-md">
         We are a team of experienced developers with a passion for creating high-quality applications and solutions. 
       </p>

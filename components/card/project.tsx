@@ -68,7 +68,7 @@ export default function Project({
           <ul className="flex flex-wrap mt-4 gap-1 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-[#e5e5e5] text-gray-600 dark:bg-black/[0.8] px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
+                className="bg-[#e5e5e5] text-gray-900 dark:bg-black/[0.8] px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
                 key={index}
               >
                 {tag}
@@ -84,9 +84,17 @@ export default function Project({
             autoPlay
             loop
             muted
-            className="absolute hidden sm:block top-0 -right-0 w-[26rem] h-full rounded-lg object-cover
+            className="absolute hidden sm:block top-0 -right-0 w-[25rem] h-full rounded-lg object-cover
              transition 
-              group-hover:scale-[1.05]
+              
+              group-hover:-translate-x-3
+              group-hover:translate-y-3
+              group-hover:-rotate-2
+              group-hover:top-10
+
+              group-even:group-hover:translate-x-3
+              group-even:group-hover:translate-y-3
+              group-even:group-hover:rotate-2
               group-even:right-[initial] group-even:-left-0"
             controls={false}
             disablePictureInPicture
@@ -97,9 +105,9 @@ export default function Project({
             src={imageUrl}
             alt="Project I worked on"
             quality={95}
-            className="absolute hidden sm:block top-0 -right-40 w-[36rem] rounded-lg h-full shadow-2xl object-cover object-top
+            className="absolute hidden sm:block top-0 -right-40 w-[35rem] rounded-lg h-full shadow-2xl object-cover object-top
               transition 
-              group-hover:scale-[1.1]
+              group-hover:scale-[1.05]
               group-hover:-translate-x-3
               group-hover:translate-y-3
               group-hover:-rotate-2

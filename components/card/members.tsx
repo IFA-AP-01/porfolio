@@ -37,22 +37,23 @@ export default function Member({
         transition: { duration: 0.3 }
       }}
     >
-      <section className="flex flex-row items-center bg-white max-w-[50rem] rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-50 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+      <section className="flex flex-row items-center bg-white max-w-[50rem] rounded-lg overflow-hidden sm:pr-8 relative sm:h-[15rem] hover:bg-gray-50 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         <motion.div 
-          className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[70%] flex flex-col h-full"
+          className="pt-4 pb-7 px-5 sm:pl-8 sm:pr-2 sm:pt-8 sm:max-w-[70%] flex flex-col h-full"
           animate={{
             x: isHovered ? 4 : 0
           }}
           transition={{ duration: 0.4 }}
         >
-          <h3 className="text-xl font-semibold">{title}</h3>
-          <div className="block sm:hidden">
+            <h3 className="text-xl font-semibold hidden sm:block">{title}</h3>
+            <div className="block sm:hidden flex items-center gap-4 mt-2">
             <Image
-              className="mt-2 w-[4rem] h-[4rem] rounded-full shadow-md dark:ring-gray-500 my-auto"
+              className="w-[4rem] h-[4rem] mb-4 rounded-full shadow-md dark:ring-gray-500"
               src={imageUrl}
               alt="Bordered avatar"
             />
-          </div>
+            <h3 className="text-lg font-semibold">{title}</h3>
+            </div>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 text-xs sm:text-sm">
             {description}
           </p>
@@ -61,14 +62,14 @@ export default function Member({
             {tags.map((tag, index) => (
               <motion.li 
                 key={index} 
-                className="transition hover:scale-[1.15]"
+                className="transition hover:scale-[1.1]"
                 animate={{ 
                   y: isHovered ? index % 2 === 0 ? -4 : -2 : 0,
                   transition: { delay: index * 0.05, duration: 0.3 }
                 }}
               >
                 <Image
-                  className="m-1 w-10 h-10 rounded-full bg-white dark:bg-gray-600"
+                  className="m-1 w-8 h-8 rounded-full bg-white dark:bg-gray-600"
                   src={tag}
                   alt={`Tag ${index}`}
                 />
