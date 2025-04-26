@@ -51,7 +51,7 @@ export default function Member({
                 <Image
                   className="m-1 w-10 h-10 rounded-full bg-white dark:bg-gray-600"
                   src={tag}
-                  alt=""
+                  alt={`Tag ${index}`}
                 />
               </li>
             ))}
