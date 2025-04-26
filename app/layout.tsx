@@ -26,6 +26,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#f5f5f5" />
         <title>The IFA Team - Application Development Experts</title>
         <meta name="description" content="Welcome to The IFA Team! We are experts in application development, delivering high-quality solutions for web, mobile, and enterprise platforms." />
+        <meta property="og:title" content="The IFA Team - Application Development Experts" />
+        <meta property="og:description" content="Welcome to The IFA Team! We are experts in application development, delivering high-quality solutions for web, mobile, and enterprise platforms." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ifateam.dev" />
+        <meta property="og:image" content="https://res.cloudinary.com/huyhunhngc/image/upload/v1745678359/logo_jmvj9s.webp" />
       </head>
       <body
         className={`${font.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-[#131313] dark:text-gray-50 dark:text-opacity-90 transition-colors duration-300`}

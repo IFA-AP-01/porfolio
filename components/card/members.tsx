@@ -53,7 +53,7 @@ export default function Member({
               alt="Bordered avatar"
             />
           </div>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 text-sm">
+          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 text-xs sm:text-sm">
             {description}
           </p>
 
