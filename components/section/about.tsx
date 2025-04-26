@@ -33,7 +33,7 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About</SectionHeading>
+      <SectionHeading highlight="About">About</SectionHeading>
       <p className="mb-3"></p>
       <h3 className="font-bold text-sm sm:text-md text-center">
       💥 Welcome! We are a dedicated team specializing in developing high-quality

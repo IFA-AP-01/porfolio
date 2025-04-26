@@ -37,13 +37,15 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mt-10 sm:mt-4 px-1 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-2 mt-10 sm:mt-4 px-1 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold text-gray-700 dark:text-gray-200">Hi, we're IFA Team👋</span>
+        <span className="font-bold text-gray-800 dark:text-gray-200">
+          Hi, we're  <span className="highlight">IFA Team </span>👋
+        </span>
       </motion.h1>
-      <span className="text-gray-500 dark:text-gray-200">Danang, Vietnam</span>
+      <span className="text-gray-700 dark:text-gray-200">Danang, Vietnam</span>
       <motion.h2
         className="mb-10 mt-8 sm:mt-8 px-4 text-md font-medium !leading-[1.5] sm:text-xl text-gray-700 dark:text-gray-200"
         style={{ fontFamily: "Consolas, monospace" }}
@@ -52,9 +54,13 @@ export default function Intro() {
       >
         <Typewriter
           options={{
-        strings: ["Software Developers.", "Mobile Consultants.", "Mobile and Web App Solution."],
-        autoStart: true,
-        loop: true,
+            strings: [
+              "Software Developers.",
+              "Mobile Consultants.",
+              "Mobile and Web App Solution.",
+            ],
+            autoStart: true,
+            loop: true,
           }}
         />
       </motion.h2>

@@ -48,3 +48,36 @@ body {
   min-height: 100vh;
   margin: 0;
 }
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-image: url("/text_highlight.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+  z-index: -1;
+  clip-path: inset(0 100% 0 0);
+  animation: drawHighlight 2s linear infinite;
+}
+
+@keyframes drawHighlight {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  50% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
