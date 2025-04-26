@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { BsArrowRight, BsDiscord } from "react-icons/bs";
 import { FaGithubSquare, FaPhone } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -29,7 +29,6 @@ export default function Intro() {
               alt="IFA"
               width="200"
               height="200"
-              quality="95"
               priority={true}
               className="h-36 w-36 rounded-full object-cover shadow-xl"
             />
@@ -91,10 +90,10 @@ export default function Intro() {
       >
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://discord.gg/MdtF7raJ"
           target="_blank"
         >
-          <BsLinkedin />
+          <BsDiscord />
         </a>
 
         <a

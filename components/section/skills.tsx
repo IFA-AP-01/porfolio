@@ -2,7 +2,8 @@
 
 import React from "react";
 import SectionHeading from "../section-heading";
-import { skillsData } from "@/lib/data";
+import { skillsJob } from "@/lib/data";
+import Image from "next/image";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 
@@ -22,31 +23,66 @@ const fadeInAnimationVariants = {
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
-
+  
   return (
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-[75rem] mx-auto scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>What we can do</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
-          <motion.li
-            className="bg-white borderBlack rounded-md text-sm px-5 py-2 dark:bg-white/10 dark:text-white/80 hover:bg-gray-100 dark:hover:bg-white/20 transition-colors"
+      <SectionHeading>What We Can Do</SectionHeading>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+        {skillsJob.map((skill, index) => (
+          <motion.div
             key={index}
+            className="relative overflow-hidden max-w-[25rem] bg-gray-50 rounded-lg border border-black/5 hover:shadow-xl transition-all duration-300 dark:bg-white/10"
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{
-              once: true,
-            }}
+            viewport={{ once: true }}
             custom={index}
+            whileHover={{ y: -5 }}
           >
-            {skill}
-          </motion.li>
+            <div className="flex flex-col h-full">
+              <div className="p-6 flex items-center justify-between">
+                <div className="flex items-center">
+                  <div className="bg-blue-50 dark:bg-gray-900/30 p-1 rounded-lg mr-4">
+                    <Image
+                      src={skill.imageUrl}
+                      alt={skill.title}
+                      width={90}
+                      height={90}
+                      className="object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold text-left text-gray-800 dark:text-white">
+                    {skill.title}
+                  </h3>
+                </div>
+                
+              </div>
+              
+              <div className="px-6 pb-6 text-left text-gray-600 dark:text-gray-300 flex-grow text-sm">
+                <p>{skill.description || `Professional ${skill.title} services tailored to your business needs.`}</p>
+              </div>
+              
+              <div className="px-6 pb-6 flex flex-wrap gap-2">
+                {skill.tags && skill.tags.map((tag, tagIndex) => (
+                  <span 
+                    key={tagIndex}
+                   className="bg-[#e5e5e5] text-gray-600 dark:bg-black/[0.8] px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 dark:from-blue-900/10 dark:to-purple-900/10 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+          </motion.div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }

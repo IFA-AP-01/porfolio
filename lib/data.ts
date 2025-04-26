@@ -1,22 +1,27 @@
 import { faHome, faBook, faUsers, faFolder, faTools, faPhone } from '@fortawesome/free-solid-svg-icons';
+import AndroidImg from "@/public/Android.webp";
+import AppleImg from "@/public/Apple.webp";
+import DevDungImg from "@/public/DevDung.webp";
+import HuyDevImg from "@/public/HuyDev.webp";
+import KotlinImg from "@/public/Kotlin.webp";
+import MyJournalImg from "@/public/MyJournalImg.webp";
+import NestJsImg from "@/public/NestJs.webp";
+import NextJsImg from "@/public/NextJs.webp";
+import SwiftImg from "@/public/Swift.webp";
+import ThangDevImg from "@/public/ThangDev.webp";
 import colorNoteImg from "@/public/colorNoteImg.webp";
+import flutterImg from "@/public/Flutter.webp";
+import liveSpeakerImg from "@/public/liveSpeakerImg.webp";
+import taskManagementImg from "@/public/taskManagementImg.webp";
 import tiziImg from "@/public/tiziImg.webp";
 import vtvImg from "@/public/vtvImg.webp";
-import liveSpeakerImg from "@/public/liveSpeakerImg.webp";
-import flutterImg from "@/public/Flutter.webp";
-import AndroidImg from "@/public/Android.webp";
-import SwiftImg from "@/public/Swift.webp";
-import KotlinImg from "@/public/Kotlin.webp";
-import AppleImg from "@/public/Apple.webp";
-import NextJsImg from "@/public/NextJs.webp";
-import NestJsImg from "@/public/NestJs.webp";
-import DevDungImg from "@/public/DevDung.webp";
-import ThangDevImg from "@/public/ThangDev.webp";
-import HuyDevImg from "@/public/HuyDev.webp";
+import vueImg from "@/public/VueImg.webp";
 import woocommerceImg from "@/public/woocommerce.webp";
 import wordpressImg from "@/public/wordpress.webp";
-import MyJournalImg from "@/public/MyJournalImg.webp";
-import taskManagementImg from "@/public/taskManagementImg.webp";
+import appDevelopmentImg from "@/public/7050114.webp";
+import webDevelopmentImg from "@/public/7050121.webp";
+import uiuxDesignImg from "@/public/7141006.webp";
+import seoOptimizeImg from "@/public/7141024.webp";
 
 export const links = [
   {
@@ -138,14 +143,14 @@ export const membersData = [
     title: "Huynh Ngoc Huy",
     description:
       "Experienced in developing high-performance applications with a focus on following best practices. Participated in projects related to e-commerce, social networks, chat, and work reservations.",
-    tags: [AndroidImg, KotlinImg, flutterImg, NestJsImg, NextJsImg, wordpressImg, woocommerceImg],
+    tags: [AndroidImg, KotlinImg, flutterImg, NestJsImg, vueImg, NextJsImg, wordpressImg, woocommerceImg],
     imageUrl: HuyDevImg,
   },
   {
     title: "Ho Ngoc Dung",
     description:
       "A mobile developer. Having 3+ years of experience and strong knowledge of Android/Kotlin, Flutter/Dart. Having extensive experience in publishing applications.",
-    tags: [flutterImg, AndroidImg, SwiftImg, KotlinImg, AppleImg, wordpressImg, woocommerceImg],
+    tags: [flutterImg, AndroidImg, SwiftImg, KotlinImg, AppleImg, vueImg, wordpressImg, woocommerceImg],
     imageUrl: DevDungImg,
   }, 
 ] as const;
@@ -180,3 +185,30 @@ export const skillsData = [
   "Elementor",
   "WooCommerce",
 ] as const;
+
+export const skillsJob = [
+  {
+    title: "App Developement",
+    imageUrl: appDevelopmentImg,
+    description: "",
+    tags: ["Android", "Kotlin", "Flutter", "iOS",  "Swift"],
+  },
+  {
+    title: "Web Developement",
+    imageUrl: webDevelopmentImg,
+    description: "",
+    tags: ["React", "Next.js", "Node.js", "NestJs", "Vue", "WordPress"],
+  },
+  {
+    title: "UI/UX Design",
+    imageUrl: uiuxDesignImg,
+    description: "",
+    tags: ["Figma", "Canva"],
+  },
+  {
+    title: "SEO Optimization",
+    imageUrl: seoOptimizeImg,
+    description: "",
+    tags: ["Schema.org", "Google Analytics", "Google Search Console"],
+  },
+]
