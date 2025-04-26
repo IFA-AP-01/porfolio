@@ -8,7 +8,7 @@ import { BsArrowRight, BsDiscord } from "react-icons/bs";
 import { FaGithubSquare, FaPhone } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import teamImage from "@/public/ifaLogo.webp";
+import teamImage from "@/public/logo.webp";
 import Typewriter from "typewriter-effect";
 
 export default function Intro() {
@@ -30,14 +30,14 @@ export default function Intro() {
               width="200"
               height="200"
               priority={true}
-              className="h-36 w-36 rounded-full object-cover shadow-xl"
+              className="h-36 w-36 rounded-full object-cover shadow-2xl"
             />
           </div>
         </div>
       </div>
 
       <motion.h1
-        className="mb-10 mt-10 sm:mt-4 px-1 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mt-10 sm:mt-4 px-1 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -45,7 +45,7 @@ export default function Intro() {
       </motion.h1>
       <span className="text-gray-500 dark:text-gray-200">Danang, Vietnam</span>
       <motion.h2
-        className="mb-10 mt-4 sm:mt-2 px-4 text-md font-medium !leading-[1.5] sm:text-xl text-gray-700 dark:text-gray-200"
+        className="mb-10 mt-8 sm:mt-8 px-4 text-md font-medium !leading-[1.5] sm:text-xl text-gray-700 dark:text-gray-200"
         style={{ fontFamily: "Consolas, monospace" }}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}

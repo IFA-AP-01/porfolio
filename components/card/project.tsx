@@ -32,34 +32,59 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-4 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-4 relative sm:h-[20rem] hover:bg-gray-100 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[40%] flex flex-col h-full sm:group-even:ml-[25rem]">
-          <h3 className="text-xl font-semibold">{title}</h3>
-          <p className="font-bold mt-2 leading-relaxed text-gray-900 dark:text-white/90 text-xs">
-            {timeline}
-          </p>
-          <p className="mt-2 leading-relaxed text-gray-600 dark:text-white/60 text-sm">
-            {description}
-          </p>
-          <ul className="flex flex-wrap mt-4 gap-1 sm:mt-auto">
-        {tags.map((tag, index) => (
-          <li
-            className="bg-[#e5e5e5] text-gray-600 dark:bg-black/[0.8] px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
-            key={index}
-          >
-            {tag}
-          </li>
-        ))}
-          </ul>
-        </div>
-
+      <section className="bg-gray-100 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden relative flex flex-col sm:flex-row sm:h-[20rem] hover:bg-gray-100 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+        {/* Media for mobile (at the top) */}
         {videoUrl ? (
           <video
             src={videoUrl}
             autoPlay
             loop
             muted
-            className="absolute hidden sm:block top-0 -right-0 w-[27rem] h-full rounded-lg object-cover
+            className="w-full h-48 sm:hidden object-cover rounded-t-lg"
+            controls={false}
+            disablePictureInPicture
+            onContextMenu={(e) => e.preventDefault()}
+          />
+        ) : (
+          <div className="w-full h-48 sm:hidden relative">
+            <Image
+              src={imageUrl}
+              alt="Project I worked on"
+              quality={95}
+              className="object-cover object-top w-full h-full rounded-t-lg"
+              fill
+            />
+          </div>
+        )}
+
+        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[40%] flex flex-col h-full sm:group-even:ml-[25rem]">
+          <h3 className="text-md sm:text-xl font-semibold">{title}</h3>
+          <p className="font-bold mt-2 leading-relaxed text-gray-900 dark:text-white/90 text-xs">
+            {timeline}
+          </p>
+          <p className="mt-2 leading-relaxed text-gray-900 dark:text-white/60 text-xs sm:text-sm">
+            {description}
+          </p>
+          <ul className="flex flex-wrap mt-4 gap-1 sm:mt-auto">
+            {tags.map((tag, index) => (
+              <li
+                className="bg-[#e5e5e5] text-gray-600 dark:bg-black/[0.8] px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
+                key={index}
+              >
+                {tag}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Media for desktop (absolute positioning) */}
+        {videoUrl ? (
+          <video
+            src={videoUrl}
+            autoPlay
+            loop
+            muted
+            className="absolute hidden sm:block top-0 -right-0 w-[26rem] h-full rounded-lg object-cover
              transition 
               group-hover:scale-[1.05]
               group-even:right-[initial] group-even:-left-0"

@@ -48,7 +48,7 @@ export default function Member({
           <h3 className="text-xl font-semibold">{title}</h3>
           <div className="block sm:hidden">
             <Image
-              className="mt-2 w-[4rem] h-[4rem] rounded-full ring-2 ring-gray-300 dark:ring-gray-500 my-auto"
+              className="mt-2 w-[4rem] h-[4rem] rounded-full shadow-md dark:ring-gray-500 my-auto"
               src={imageUrl}
               alt="Bordered avatar"
             />
@@ -90,7 +90,7 @@ export default function Member({
           }}
         >
           <Image
-            className="w-[10rem] h-[10rem] object-cover transition-all hover:scale-[1.15] rounded-full ring-2 ring-gray-300 dark:ring-gray-500 my-auto"
+            className="w-[10rem] h-[10rem] object-cover transition-all hover:scale-[1.15] rounded-full shadow-md dark:ring-gray-500 my-auto"
             src={imageUrl}
             alt="Bordered avatar"
           />
