@@ -59,9 +59,10 @@ export default function Project({
             autoPlay
             loop
             muted
-            className="absolute hidden sm:block top-0 left-0 w-[27rem] h-full object-cover
+            className="absolute hidden sm:block top-0 -right-0 w-[27rem] h-full object-cover
              transition 
-              group-hover:scale-[1.05]"
+              group-hover:scale-[1.05]
+              group-even:right-[initial] group-even:-left-0"
           />
         ) : (
           <Image

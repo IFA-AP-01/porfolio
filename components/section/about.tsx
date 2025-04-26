@@ -26,7 +26,7 @@ export default function About() {
       </h3>{" "}
       <ul className="mt-8 list-disc text-sm text-gray-800 dark:text-white/80">
         <li>
-          We are developers with 3 to 5 years of experience in developing
+          We are developers with 5 years of experience in developing
           applications on Android, iOS, Flutter, and websites. We have
           participated in complex business projects, projects with stringent
           security requirements, and several IoT projects.

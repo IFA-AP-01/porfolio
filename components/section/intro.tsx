@@ -5,11 +5,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare, FaPhone } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import teamImage from "@/public/ifaLogo.png";
+import teamImage from "@/public/ifaLogo.webp";
 import Typewriter from "typewriter-effect";
 
 export default function Intro() {
@@ -39,13 +38,13 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-10 sm:mt-2 px-1 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-10 sm:mt-4 px-1 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold text-gray-700 dark:text-gray-200">Hi, we're IFA Team👋</span>
       </motion.h1>
-      <span className="font-bold text-gray-500 dark:text-gray-200">Danang, Vietnam</span>
+      <span className="text-gray-500 dark:text-gray-200">Danang, Vietnam</span>
       <motion.h2
         className="mb-10 mt-4 sm:mt-2 px-4 text-md font-medium !leading-[1.5] sm:text-xl text-gray-700 dark:text-gray-200"
         style={{ fontFamily: "Consolas, monospace" }}
