@@ -24,6 +24,8 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <head>
         <meta name="theme-color" content="#f5f5f5" />
+        <title>The IFA Team</title>
+        <meta name="description" content="Welcome! We are a dedicated team specializing in developing high-quality applications and solutions across various platforms. " />
       </head>
       <body
         className={`${font.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-[#131313] dark:text-gray-50 dark:text-opacity-90 transition-colors duration-300`}
