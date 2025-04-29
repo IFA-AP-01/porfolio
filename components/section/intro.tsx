@@ -55,9 +55,9 @@ export default function Intro() {
         <Typewriter
           options={{
             strings: [
-              "Software Developers.",
-              "Mobile Consultants.",
-              "Mobile and Web App Solution.",
+              "Building Apps for Web & Mobile Vibes.",
+              "Crafting Code, Shaping Futures.",
+              "Mobile Expertise, Limitless Solutions.",
             ],
             autoStart: true,
             loop: true,
