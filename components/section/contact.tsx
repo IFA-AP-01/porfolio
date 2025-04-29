@@ -29,7 +29,7 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading highlight="Get in">Get in Touch</SectionHeading>
+      <SectionHeading highlight="Get in Touch">Get in Touch</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact us directly at{" "}

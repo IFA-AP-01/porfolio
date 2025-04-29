@@ -64,7 +64,7 @@ export const projectsData = [
       "Discover Livespeaker, the innovative voice translation tool that facilitates multilingual communication.",
     tags: ["Kotlin", "KMP", "Firebase", "Deepgram", "Gemini"],
     imageUrl: liveSpeakerImg,
-    videoUrl: "",
+    videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745943450/Live_Speaker_i2aihw.mp4",
   },
   {
     title: "Aardwolf India",

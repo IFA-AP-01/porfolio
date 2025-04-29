@@ -32,7 +32,7 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-4 last:mb-0"
     >
-      <section className="bg-white max-w-[50rem] rounded-lg overflow-hidden relative flex flex-col sm:flex-row sm:h-[20rem] hover:bg-gray-100 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+      <section className="bg-white max-w-[56rem] rounded-lg overflow-hidden relative flex flex-col sm:flex-row sm:h-[20rem] hover:bg-gray-100 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         {/* Media for mobile (at the top) */}
         {videoUrl ? (
           <video
@@ -57,7 +57,7 @@ export default function Project({
           </div>
         )}
 
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[40%] flex flex-col h-full sm:group-even:ml-[25rem]">
+        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[40%] flex flex-col h-full sm:group-even:ml-[28rem]">
           <h3 className="text-md sm:text-xl font-semibold">{title}</h3>
           <p className="font-bold mt-2 leading-relaxed text-gray-900 dark:text-white/90 text-xs">
             {timeline}
@@ -84,7 +84,7 @@ export default function Project({
             autoPlay
             loop
             muted
-            className="absolute hidden sm:block top-0 -right-0 w-[25rem] h-full rounded-lg object-cover
+            className="absolute hidden sm:block top-0 -right-0 w-[28rem] h-full rounded-lg object-cover
              transition 
               
               group-hover:-translate-x-3
