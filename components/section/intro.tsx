@@ -48,16 +48,16 @@ export default function Intro() {
         transition={{ delay: 0.1 }}
         className="mt-8 space-y-2"
       >
-        <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">
-          <span className="text-gray-700 dark:text-gray-200">
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          <span className="text-black/70 dark:text-white">
             <span className="relative">
               <span className="relative z-10">Hi, we're IFA Team 👋</span>
-              <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/20 dark:bg-blue-400/20 -z-10 transform -rotate-1"></span>
+              <span className="absolute bottom-0 left-0 w-full h-3 bg-primary/20 dark:bg-primary/20 -z-10 transform -rotate-1"></span>
             </span>
           </span>
         </h1>
         <p className="text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2 text-lg">
-          <FaMapMarkerAlt /> Danang, Vietnam
+          <FaMapMarkerAlt className="text-tertiary dark:text-primary "/> Danang, Vietnam
         </p>
       </motion.div>
 
@@ -103,9 +103,9 @@ export default function Intro() {
         ].map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-3 rounded-lg bg-gray-50 dark:bg-gray-800/40 shadow-sm hover:shadow-md transition-all"
+            className="flex flex-col items-center p-3 rounded-lg bg-primary/20 shadow-sm hover:shadow-md transition-all"
           >
-            <div className="text-blue-500 mb-2">{service.icon}</div>
+            <div className="text-primary sm:mb-2">{service.icon}</div>
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300 hidden sm:block">
               {service.text}
             </span>
@@ -121,7 +121,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gradient-to-r from-gray-600 to-gray-400 text-white text-base px-8 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:shadow-lg hover:from-gray-700 hover:to-gray-600 active:scale-105 transition"
+          className="group bg-gradient-to-r from-primary/90 to-primary/50 text-white text-base px-8 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:shadow-lg hover:from-primary hover:to-primary/80 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());

@@ -49,7 +49,7 @@ export default function Skills() {
             <div className="flex flex-col h-full">
               <div className="p-4 flex items-center justify-between">
                 <div className="flex items-center">
-                  <div className="bg-blue-50 dark:bg-gray-900/30 p-1 rounded-lg mr-4">
+                  <div className="bg-primary/20 dark:bg-tertiary/20 p-1 rounded-lg mr-4">
                     <Image
                       src={skill.imageUrl}
                       alt={skill.title}
@@ -58,7 +58,7 @@ export default function Skills() {
                       className="object-contain"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-left text-gray-800 dark:text-white">
+                  <h3 className="text-xl font-bold text-left text-gray-700 dark:text-white">
                     {skill.title}
                   </h3>
                 </div>
@@ -73,7 +73,7 @@ export default function Skills() {
                 {skill.tags && skill.tags.map((tag, tagIndex) => (
                   <span 
                     key={tagIndex}
-                   className="bg-[#e5e5e5] text-gray-900 dark:bg-black/[0.8] px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
+                   className="bg-primary/10 text-tertiary px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
                   >
                     {tag}
                   </span>

@@ -31,11 +31,11 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading highlight="Get in Touch">Get in Touch</SectionHeading>
+      <SectionHeading highlight="Touch">Get in Touch</SectionHeading>
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact us directly at{" "}
         <a
-          className="font-bold text-[#0080ff]"
+          className="font-bold text-primary dark:text-primary/80 hover:underline"
           href="mailto:ifa.mobileteam@gmail.com"
         >
           ifa.mobileteam@gmail.com

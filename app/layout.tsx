@@ -35,8 +35,8 @@ export default function RootLayout({
       <body
         className={`${font.className} bg-[#faf8f1] text-gray-950 relative pt-28 sm:pt-36 dark:bg-[#131313] dark:text-gray-50 dark:text-opacity-90 transition-colors duration-300`}
       >
-        <div className="bg-gradient-to-r from-[#fbc2eb] to-[#a6c1ee] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:from-[#278bb0] dark:to-[#131313] transition-colors duration-300"></div>
-        <div className="bg-gradient-to-r from-[#ffecd2] to-[#fcb69f] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:from-[#131313] dark:to-[#2b4e70] transition-colors duration-300"></div>
+        <div className="bg-gradient-to-r from-[#fbc2eb] to-[#a6c1ee] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:from-[#873f20] dark:to-[#000000] transition-colors duration-300"></div>
+        <div className="bg-gradient-to-r from-[#ffecd2] to-[#fcb69f] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:from-[#000000] dark:to-[#4d2f22] transition-colors duration-300"></div>
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
