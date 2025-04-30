@@ -146,13 +146,13 @@ export const membersData = [
     tags: [AndroidImg, KotlinImg, flutterImg, NestJsImg, vueImg, NextJsImg, wordpressImg, woocommerceImg],
     imageUrl: HuyDevImg,
   },
-  {
-    title: "Ho Ngoc Dung",
-    description:
-      "A mobile developer. Having 3+ years of experience and strong knowledge of Android/Kotlin, Flutter/Dart. Having extensive experience in publishing applications.",
-    tags: [flutterImg, AndroidImg, SwiftImg, KotlinImg, AppleImg, vueImg, wordpressImg, woocommerceImg],
-    imageUrl: DevDungImg,
-  }, 
+  // {
+  //   title: "Ho Ngoc Dung",
+  //   description:
+  //     "A mobile developer. Having 3+ years of experience and strong knowledge of Android/Kotlin, Flutter/Dart. Having extensive experience in publishing applications.",
+  //   tags: [flutterImg, AndroidImg, SwiftImg, KotlinImg, AppleImg, vueImg, wordpressImg, woocommerceImg],
+  //   imageUrl: DevDungImg,
+  // }, 
 ] as const;
 
 export const skillsData = [

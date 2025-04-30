@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { BsDiscord } from "react-icons/bs";
+import { FaGithubSquare, FaPhone } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 import {
   FaMapMarkerAlt,
@@ -10,7 +12,7 @@ import {
   FaLaptopCode,
   FaCode,
   FaCloudUploadAlt,
-  FaSearch
+  FaSearch,
 } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -35,7 +37,7 @@ export default function Intro() {
         transition={{ type: "spring", stiffness: 100 }}
       >
         <div className="relative">
-          <ProfileImage/>
+          <ProfileImage />
         </div>
       </motion.div>
 
@@ -61,7 +63,7 @@ export default function Intro() {
 
       {/* Dynamic Headline */}
       <motion.div
-        className="mb-10 mt-6 px-4"
+        className="mb-6 mt-6 px-4"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -88,7 +90,7 @@ export default function Intro() {
 
       {/* Services Highlights */}
       <motion.div
-        className="grid grid-cols-4 sm:grid-cols-4 gap-3 px-4 mb-8"
+        className="grid grid-cols-4 sm:grid-cols-4 gap-3 px-4 mb-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
@@ -110,7 +112,6 @@ export default function Intro() {
           </div>
         ))}
       </motion.div>
-
       {/* CTA Button */}
       <motion.div
         className="flex flex-col items-center justify-center gap-3 px-4 font-medium"
@@ -129,6 +130,43 @@ export default function Intro() {
           Start Your Project With Us{" "}
           <BsArrowRight className="opacity-80 group-hover:translate-x-1 transition" />
         </Link>
+      </motion.div>
+      {/* Social Links */}
+      <motion.div
+        className="flex flex-row items-center justify-center gap-3 text-lg font-medium mt-4"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <a
+          className="bg-white p-3 text-gray-700 hover:text-blue-600 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
+          href="https://discord.gg/MdtF7raJ"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Join us on Discord"
+        >
+          <BsDiscord className="text-xl" />
+        </a>
+
+        <a
+          className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-blue-600 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
+          href="https://github.com/IFA-AP-01"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View our GitHub projects"
+        >
+          <FaGithubSquare />
+        </a>
+
+        <a
+          className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-blue-600 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
+          href="tel:+84859885874"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Call us"
+        >
+          <FaPhone />
+        </a>
       </motion.div>
     </section>
   );
