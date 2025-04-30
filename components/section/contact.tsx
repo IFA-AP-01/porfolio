@@ -7,6 +7,8 @@ import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "../submit-btn";
 import toast from "react-hot-toast";
+import { BsDiscord } from "react-icons/bs";
+import { FaGithubSquare, FaPhone } from "react-icons/fa";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -15,7 +17,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="mb-16 sm:mb-18 w-[min(100%,38rem)] text-center"
       initial={{
         opacity: 0,
       }}
@@ -30,7 +32,6 @@ export default function Contact() {
       }}
     >
       <SectionHeading highlight="Get in Touch">Get in Touch</SectionHeading>
-
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact us directly at{" "}
         <a
@@ -41,6 +42,44 @@ export default function Contact() {
         </a>{" "}
         or through this form.
       </p>
+
+      {/* Social Links */}
+      <motion.div
+        className="flex flex-row items-center justify-center gap-3 text-lg font-medium mt-4"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <a
+          className="bg-white p-4 text-gray-700 hover:text-blue-600 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
+          href="https://discord.gg/MdtF7raJ"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Join us on Discord"
+        >
+          <BsDiscord className="text-xl" />
+        </a>
+
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-blue-600 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
+          href="https://github.com/IFA-AP-01"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View our GitHub projects"
+        >
+          <FaGithubSquare />
+        </a>
+
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-blue-600 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
+          href="tel:+84859885874"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Call us"
+        >
+          <FaPhone />
+        </a>
+      </motion.div>
 
       <form
         className="mt-10 flex flex-col dark:text-black"

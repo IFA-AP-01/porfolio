@@ -33,7 +33,6 @@ export default function Project({
       className="group mb-3 sm:mb-4 last:mb-0"
     >
       <section className="bg-white max-w-[56rem] rounded-lg overflow-hidden relative flex flex-col sm:flex-row sm:h-[20rem] hover:bg-gray-100 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        {/* Media for mobile (at the top) */}
         {videoUrl ? (
           <video
             src={videoUrl}
@@ -77,7 +76,6 @@ export default function Project({
           </ul>
         </div>
 
-        {/* Media for desktop (absolute positioning) */}
         {videoUrl ? (
           <video
             src={videoUrl}
