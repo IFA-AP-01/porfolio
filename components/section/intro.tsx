@@ -49,7 +49,7 @@ export default function Intro() {
         <h1 className="text-3xl sm:text-5xl font-bold tracking-tight">
           <span className="text-gray-700 dark:text-gray-200">
             <span className="relative">
-              <span className="highlight relative z-10">IFA Team 👋</span>
+              <span className="relative z-10">Hi, we're IFA Team 👋</span>
               <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/20 dark:bg-blue-400/20 -z-10 transform -rotate-1"></span>
             </span>
           </span>
@@ -76,7 +76,6 @@ export default function Intro() {
                 "Crafting Code, Shaping Futures.",
                 "Mobile Expertise, Limitless Solutions.",
                 "Apps that Power Web & Mobile Worlds.",
-                "Building Tomorrow's Applications, Today",
               ],
               autoStart: true,
               loop: true,
@@ -89,7 +88,7 @@ export default function Intro() {
 
       {/* Services Highlights */}
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-4 gap-3 px-4 mb-8"
+        className="grid grid-cols-4 sm:grid-cols-4 gap-3 px-4 mb-8"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
@@ -105,7 +104,7 @@ export default function Intro() {
             className="flex flex-col items-center p-3 rounded-lg bg-gray-50 dark:bg-gray-800/40 shadow-sm hover:shadow-md transition-all"
           >
             <div className="text-blue-500 mb-2">{service.icon}</div>
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 hidden sm:block">
               {service.text}
             </span>
           </div>

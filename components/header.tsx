@@ -23,7 +23,7 @@ export default function Header() {
           width="50"
           height="50"
           priority={true}
-          className="h-10 w-10 rounded-full object-cover fixed top-5 left-5 z-1000 hidden  sm:inline-flex"
+          className="w-10 object-cover fixed top-5 left-5 z-1000 hidden  sm:inline-flex"
         />
       </Link>
       <motion.div

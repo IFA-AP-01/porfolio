@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <head>
         <meta name="theme-color" content="#faf8f1" />
-        <title>The IFA Team - Application Development Experts</title>
+        <title>IFA Team - Application Development Experts</title>
         <meta name="description" content="Welcome to The IFA Team! We are experts in application development, delivering high-quality solutions for web, mobile, and enterprise platforms." />
         <meta property="og:title" content="The IFA Team - Application Development Experts" />
         <meta property="og:description" content="Welcome to The IFA Team! We are experts in application development, delivering high-quality solutions for web, mobile, and enterprise platforms." />
