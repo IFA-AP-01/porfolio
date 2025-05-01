@@ -52,7 +52,7 @@ export default function Member({
               src={imageUrl}
               alt="Bordered avatar"
             />
-            <h3 className="text-lg font-semibold">{title}</h3>
+            <h3 className="text-lg font-semibold mb-4">{title}</h3>
             </div>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 text-xs sm:text-sm">
             {description}
