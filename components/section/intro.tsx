@@ -90,7 +90,7 @@ export default function Intro() {
 
       {/* Services Highlights */}
       <motion.div
-        className="grid grid-cols-4 sm:grid-cols-4 gap-3 px-4 mb-6"
+        className="grid grid-cols-4 sm:grid-cols-4 gap-3 px-4 mb-12"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}

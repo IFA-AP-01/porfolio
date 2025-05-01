@@ -22,6 +22,7 @@ import appDevelopmentImg from "@/public/7050114.webp";
 import webDevelopmentImg from "@/public/7050121.webp";
 import uiuxDesignImg from "@/public/7141006.webp";
 import seoOptimizeImg from "@/public/7141024.webp";
+import springImg from "@/public/springImg.webp";
 
 export const links = [
   {
@@ -136,7 +137,7 @@ export const membersData = [
     title: "Le Duc Thang",
     description:
       "5+ years of in-depth experience in iOS application development. Participated in numerous projects requiring performance optimization and enhanced security.",
-    tags: [SwiftImg, flutterImg, AppleImg, wordpressImg, woocommerceImg],
+    tags: [ AppleImg, SwiftImg, flutterImg, springImg, wordpressImg, woocommerceImg],
     imageUrl: ThangDevImg,
   },
   {
@@ -170,6 +171,8 @@ export const skillsData = [
   "Next.js",
   "Vue",
   "Node.js",
+  "Spring",
+  "NestJs",
   "Express",
   "MongoDB",
   "MySQL",

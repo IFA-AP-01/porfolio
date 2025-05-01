@@ -31,11 +31,15 @@ import {
   SiWordpress,
   SiWoocommerce,
   SiVercel,
+  SiSpring,
+  SiNestjs
 } from "react-icons/si";
 const skillIcons: { [key: string]: JSX.Element } = {
   Android: <SiAndroid />,
   iOS: <SiApple />,
   KMP: <SiKotlin />,
+  Spring: <SiSpring />,
+  NestJs: <SiNestjs />,
   Kotlin: <SiKotlin />,
   Swift: <SiSwift />,
   Flutter: <SiFlutter />,
