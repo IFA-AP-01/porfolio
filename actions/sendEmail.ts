@@ -3,7 +3,9 @@ import { validateString, getErrorMessage } from "@/lib/utils";
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
+  const recaptchaToken = formData.get("recaptchaToken");
 
+  // Validate inputs
   if (!validateString(senderEmail, 500)) {
     return {
       error: "Invalid sender email",
@@ -14,7 +16,12 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid message",
     };
   }
-
+  if (!validateString(recaptchaToken, 1000)) {
+    return {
+      error: "Invalid reCAPTCHA token",
+    };
+  }
+  // Proceed with sending email
   let data;
   try {
     const response = await fetch("https://mail-for-portfolio.vercel.app/api/send-email", {
@@ -23,9 +30,10 @@ export const sendEmail = async (formData: FormData) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: "ifa.mobileteam@gmail.com",
+        email: senderEmail,
         content: message,
         subject: "New message from contact form",
+        recaptchaToken: recaptchaToken,
       }),
     });
 

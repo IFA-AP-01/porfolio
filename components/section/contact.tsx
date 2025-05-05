@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useState } from "react";
 import SectionHeading from "../section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -9,10 +9,11 @@ import SubmitBtn from "../submit-btn";
 import toast from "react-hot-toast";
 import { BsDiscord } from "react-icons/bs";
 import { FaGithubSquare, FaPhone } from "react-icons/fa";
+import { useGoogleReCaptcha, GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
-
+  const { executeRecaptcha } = useGoogleReCaptcha();
   return (
     <motion.section
       id="contact"
@@ -80,12 +81,20 @@ export default function Contact() {
           <FaPhone />
         </a>
       </motion.div>
-
+      <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}>
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
+          // Append reCAPTCHA token to formData
+          if (!executeRecaptcha) {
+            toast.error("reCAPTCHA is not ready. Please try again later.");
+            return;
+          }
+          const token = await executeRecaptcha("contact_form");
+    
+          formData.append("recaptchaToken", token);
           const { data, error } = await sendEmail(formData);
-
+         
           if (error) {
             toast.error(error);
             return;
@@ -111,6 +120,7 @@ export default function Contact() {
         />
         <SubmitBtn />
       </form>
+      </GoogleReCaptchaProvider>
     </motion.section>
   );
 }
