@@ -24,15 +24,19 @@ export const sendEmail = async (formData: FormData) => {
   // Proceed with sending email
   let data;
   try {
-    const response = await fetch("https://mail-for-portfolio.vercel.app/api/send-email", {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiUrl) {
+      throw new Error("API URL is not defined");
+    }
+    const response = await fetch(`${apiUrl}/send-email`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+      "Content-Type": "application/json",
       },
       body: JSON.stringify({
         email: senderEmail,
         content: message,
-        subject: "New message from contact form",
+        subject: "IFA Team new message from contact form",
         recaptchaToken: recaptchaToken,
       }),
     });
