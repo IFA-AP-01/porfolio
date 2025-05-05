@@ -13,7 +13,7 @@ const ContactForm = () => {
       return;
     }
 
-    const token = await executeRecaptcha("contact_form");
+    const token = await executeRecaptcha();
     formData.append("recaptchaToken", token);
 
     const { data, error } = await sendEmail(formData);
