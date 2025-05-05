@@ -27,7 +27,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-20 max-w-[60rem] text-center sm:mb-0 scroll-mt-[90rem]"
+      className="pt-28 sm:pt-36 mb-20 max-w-[60rem] text-center sm:mb-0 scroll-mt-[90rem]"
     >
       {/* Hero Image with Animation */}
       <motion.div
