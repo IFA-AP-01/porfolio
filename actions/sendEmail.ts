@@ -16,9 +16,9 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid message",
     };
   }
-  if (!validateString(recaptchaToken, 1000)) {
+  if (!recaptchaToken) {
     return {
-      error: "Invalid reCAPTCHA token",
+      error: "Invalid or missing reCAPTCHA token",
     };
   }
   // Proceed with sending email
