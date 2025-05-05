@@ -1,11 +1,4 @@
-
-
-import React from "react";
-import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
-import ContactFormEmail from "@/email/contact-form-email";
-
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
@@ -24,16 +17,23 @@ export const sendEmail = async (formData: FormData) => {
 
   let data;
   try {
-    data = await resend.emails.send({
-      from: "onboarding@resend.dev",
-      to: "ifa.mobileteam@gmail.com",
-      subject: "New message from contact form",
-      reply_to: senderEmail,
-      react: React.createElement(ContactFormEmail, {
-        message: message,
-        senderEmail: senderEmail,
+    const response = await fetch("https://mail-for-portfolio.vercel.app/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: "ifa.mobileteam@gmail.com",
+        content: message,
+        subject: "New message from contact form",
       }),
     });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    data = await response.json();
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error),
