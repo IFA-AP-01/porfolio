@@ -23,6 +23,7 @@ import webDevelopmentImg from "@/public/7050121.webp";
 import uiuxDesignImg from "@/public/7141006.webp";
 import seoOptimizeImg from "@/public/7141024.webp";
 import springImg from "@/public/springImg.webp";
+import stoneFabberImg from "@/public/stonefabber.webp";
 
 export const links = [
   {
@@ -75,6 +76,15 @@ export const projectsData = [
     tags: ["Wordpress", "PHP", "Elementor", "Woocomerce"],
     imageUrl: "",
     videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745602203/aardwolf-india_ibetbw.mp4",
+  },
+  {
+    title: "Stone Fabbers",
+    timeline: "Feb 2025",
+    description:
+      "E-magazine for the stone industry, providing information about stone processing machines and tools.",
+    tags: ["Wordpress", "PHP", "Flatsome"],
+    imageUrl: stoneFabberImg,
+    videoUrl: "",
   },
   {
     title: "Battery Meter",
