@@ -1,3 +1,4 @@
+import { epilogueFont } from "@/lib/fontawesome";
 import React from "react";
 
 type SectionHeadingProps = {
@@ -22,7 +23,7 @@ export default function SectionHeading({ children, highlight }: SectionHeadingPr
   };
 
   return (
-    <h2 className="text-xl sm:text-2xl capitalize mb-8 text-center font-bold">
+    <h2 className={`${epilogueFont.className} text-xl sm:text-3xl capitalize mb-8 text-center font-bold`}>
       {renderChildren()}
     </h2>
   );

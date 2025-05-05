@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="mb-10 px-4 text-center text-gray-500">
-      <small className="mb-2 block text-xs right-0 text-gray-400">
+    <footer className="mb-10 px-4 text-center">
+      <small className="mb-2 block text-xs right-0 text-gray-900 dark:text-white/80">
       &copy; {new Date().getFullYear()} IFA Team. All rights reserved.
       </small>
     </footer>

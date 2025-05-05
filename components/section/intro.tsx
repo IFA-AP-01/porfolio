@@ -11,13 +11,13 @@ import {
   FaMobile,
   FaLaptopCode,
   FaCode,
-  FaCloudUploadAlt,
   FaSearch,
 } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import Typewriter from "typewriter-effect";
 import ProfileImage from "../card/profile";
+import { epilogueFont } from "@/lib/fontawesome";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -49,9 +49,9 @@ export default function Intro() {
         className="mt-8 space-y-2"
       >
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-          <span className="text-black/70 dark:text-white">
+          <span className="text-black/80 dark:text-white">
             <span className="relative">
-              <span className="relative z-10">Hi, we're IFA Team 👋</span>
+                <span className={`${epilogueFont.className} relative z-10`}>Hi, we're IFA Team 👋</span>
               <span className="absolute bottom-0 left-0 w-full h-3 bg-primary/20 dark:bg-primary/20 -z-10 transform -rotate-1"></span>
             </span>
           </span>

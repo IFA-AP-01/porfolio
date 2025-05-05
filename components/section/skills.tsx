@@ -6,6 +6,7 @@ import { skillsJob } from "@/lib/data";
 import Image from "next/image";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import { epilogueFont } from "@/lib/fontawesome";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -58,7 +59,7 @@ export default function Skills() {
                       className="object-contain"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-left text-gray-700 dark:text-white">
+                  <h3 className={`${epilogueFont.className} text-xl font-bold text-left text-gray-700 dark:text-white`}>
                     {skill.title}
                   </h3>
                 </div>

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { membersData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { epilogueFont } from "@/lib/fontawesome";
 
 type MemberProps = (typeof membersData)[number];
 
@@ -45,14 +46,14 @@ export default function Member({
           }}
           transition={{ duration: 0.4 }}
         >
-            <h3 className="text-xl font-semibold hidden sm:block">{title}</h3>
+            <h3 className={`${epilogueFont.className} text-xl font-semibold hidden sm:block`}>{title}</h3>
             <div className="block sm:hidden flex items-center gap-4 mt-2">
             <Image
               className="w-[4rem] h-[4rem] mb-4 rounded-full shadow-md dark:ring-gray-500"
               src={imageUrl}
               alt="Bordered avatar"
             />
-            <h3 className="text-lg font-semibold mb-4">{title}</h3>
+            <h3 className={`${epilogueFont.className} text-lg font-semibold mb-4`}>{title}</h3>
             </div>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 text-xs sm:text-sm">
             {description}
