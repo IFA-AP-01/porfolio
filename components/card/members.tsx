@@ -49,7 +49,7 @@ export default function Member({
             <h3 className={`${epilogueFont.className} text-xl font-semibold hidden sm:block`}>{title}</h3>
             <div className="block sm:hidden flex items-center gap-4 mt-2">
             <Image
-              className="w-[4rem] h-[4rem] mb-4 rounded-full shadow-md dark:ring-gray-500"
+              className="w-[4rem] h-[4rem] mb-4 rounded-full shadow-md dark:ring-gray-500 object-cover"
               src={imageUrl}
               alt="Bordered avatar"
             />
@@ -92,7 +92,7 @@ export default function Member({
           }}
         >
           <Image
-            className="w-[10rem] h-[10rem] object-cover transition-all hover:scale-[1.15] rounded-full shadow-md dark:ring-gray-500 my-auto"
+            className="w-[8rem] h-[8rem] object-cover transition-all hover:scale-[1.15] rounded-full shadow-md dark:ring-gray-500 my-auto"
             src={imageUrl}
             alt="Bordered avatar"
           />

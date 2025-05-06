@@ -52,12 +52,12 @@ const ContactForm = () => {
 
   return (
     <form
-      className="mt-10 flex flex-col dark:text-black"
+      className="mt-10 flex flex-col"
       onSubmit={handleSubmit}
       ref={formRef}
     >
       <input
-        className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-20 dark:focus:bg-opacity-30 transition-all dark:outline-none"
+        className="h-14 px-4 rounded-lg dark:bg-white dark:bg-opacity-20 dark:focus:bg-opacity-30 transition-all"
         name="senderEmail"
         type="email"
         required
@@ -66,7 +66,7 @@ const ContactForm = () => {
         disabled={isLoading}
       />
       <textarea
-        className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-20 dark:focus:bg-opacity-30 transition-all dark:outline-none"
+        className="h-52 my-3 rounded-lg p-4 dark:bg-white dark:bg-opacity-20 dark:focus:bg-opacity-30 transition-all resize-none"
         name="message"
         placeholder="Your message"
         required

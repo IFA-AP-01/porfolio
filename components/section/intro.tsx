@@ -56,21 +56,20 @@ export default function Intro() {
             </span>
           </span>
         </h1>
-        <p className="text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2 text-lg">
+        <p className="text-gray-700 dark:text-gray-200 flex items-center justify-center gap-2 text-lg">
           <FaMapMarkerAlt className="text-tertiary dark:text-primary "/> Danang, Vietnam
         </p>
       </motion.div>
 
       {/* Dynamic Headline */}
       <motion.div
-        className="mb-6 mt-6 px-4"
+        className="mb-6 mt-12 px-4"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
         <h2
-          className="text-sm sm:text-xl !leading-relaxed font-medium text-gray-700 dark:text-gray-200"
-          style={{ fontFamily: "Consolas, monospace" }}
+          className={`${epilogueFont.className} text-sm sm:text-xl !leading-relaxed font-medium text-gray-700 dark:text-gray-200`}
         >
           <Typewriter
             options={{
@@ -103,10 +102,10 @@ export default function Intro() {
         ].map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-3 rounded-lg bg-primary/20 shadow-sm hover:shadow-md transition-all"
+            className="backdrop-blur-[0.5rem] flex flex-col items-center p-3 rounded-lg bg-white/50 dark:bg-white/10 shadow-sm hover:shadow-md transition-all"
           >
             <div className="text-primary sm:mb-2">{service.icon}</div>
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 hidden sm:block">
+            <span className="text-sm font-medium text-primary hidden sm:block">
               {service.text}
             </span>
           </div>
@@ -121,7 +120,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gradient-to-r from-primary/90 to-primary/50 text-white text-base px-8 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:shadow-lg hover:from-primary hover:to-primary/80 active:scale-105 transition"
+          className="backdrop-blur-[0.5rem] group bg-gradient-to-r from-primary/90 to-primary/50 text-white text-base px-8 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:shadow-lg hover:from-primary hover:to-primary/80 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -139,7 +138,7 @@ export default function Intro() {
         transition={{ delay: 0.5 }}
       >
         <a
-          className="bg-white p-3 text-gray-700 hover:text-blue-600 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
+          className="bg-white p-3 text-gray-700 hover:text-primary flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
           href="https://discord.gg/MdtF7raJ"
           target="_blank"
           rel="noopener noreferrer"
@@ -149,7 +148,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-blue-600 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
+          className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-primary active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
           href="https://github.com/IFA-AP-01"
           target="_blank"
           rel="noopener noreferrer"
@@ -159,7 +158,7 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-blue-600 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
+          className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-primary active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/70 dark:hover:text-white"
           href="tel:+84859885874"
           target="_blank"
           rel="noopener noreferrer"

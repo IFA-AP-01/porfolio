@@ -58,7 +58,7 @@ export default function Project({
         )}
 
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[40%] flex flex-col h-full sm:group-even:ml-[28rem]">
-          <h3 className={`${epilogueFont.className} text-md sm:text-xl font-semibold text-gray-900 dark:text-white/60`}>{title}</h3>
+          <h3 className={`${epilogueFont.className} text-md sm:text-xl font-semibold text-gray-900 dark:text-white/90`}>{title}</h3>
           <p className="font-bold mt-2 leading-relaxed text-gray-900 dark:text-white/90 text-xs">
             {timeline}
           </p>
@@ -68,7 +68,7 @@ export default function Project({
           <ul className="flex flex-wrap mt-4 gap-1 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-primary/10 text-tertiary px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
+                className="bg-primary/20 text-tertiary px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
                 key={index}
               >
                 {tag}
@@ -104,7 +104,7 @@ export default function Project({
             src={imageUrl}
             alt="Project I worked on"
             quality={95}
-            className="absolute hidden sm:block top-0 -right-40 w-[35rem] rounded-lg h-full shadow-2xl object-cover object-top
+            className="absolute hidden sm:block top-0 -right-40 w-[38rem] rounded-lg h-full shadow-2xl object-cover object-top
               transition 
               group-hover:scale-[1.05]
               group-hover:-translate-x-3

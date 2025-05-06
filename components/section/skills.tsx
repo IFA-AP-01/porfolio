@@ -74,7 +74,7 @@ export default function Skills() {
                 {skill.tags && skill.tags.map((tag, tagIndex) => (
                   <span 
                     key={tagIndex}
-                   className="bg-primary/10 text-tertiary px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
+                   className="bg-primary/20 text-tertiary px-3 py-1 text-[0.7rem] tracking-wider rounded-md dark:text-white/70"
                   >
                     {tag}
                   </span>

@@ -70,10 +70,10 @@ export const projectsData = [
   },
   {
     title: "Aardwolf India",
-    timeline: "March 2025 - April 2025",
+    timeline: "Mar 2025 - Apr 2025",
     description:
       "Aardwolf manufactures material handling equipment for the stone, glass and metal industries. ",
-    tags: ["Wordpress", "PHP", "Elementor", "Woocomerce"],
+    tags: ["Wordpress", "PHP", "Elementor", "Woocomerce", "Custom Plugin", "Custom Theme"],
     imageUrl: "",
     videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745602203/aardwolf-india_ibetbw.mp4",
   },
@@ -82,7 +82,7 @@ export const projectsData = [
     timeline: "Feb 2025",
     description:
       "E-magazine for the stone industry, providing information about stone processing machines and tools.",
-    tags: ["Wordpress", "PHP", "Flatsome"],
+    tags: ["Wordpress", "PHP", "Flatsome", "Custom Plugin", "Custom Theme"],
     imageUrl: stoneFabberImg,
     videoUrl: "",
   },
@@ -91,22 +91,22 @@ export const projectsData = [
     timeline: "Sep 2024 - Nov 2024",
     description:
       "A lightweight application designed to monitor the battery status of a device, providing real-time updates on battery health.",
-    tags: ["Android", "Kotlin", "Jetpack Compose", "Github Action"],
+    tags: ["Android", "Kotlin", "Jetpack Compose", "Glance Widget", "Dynamic Color", "Jetpack Library"],
     imageUrl: tiziImg,
     videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745601050/battery-meter_bff18q.mp4",
   },
   {
     title: "King Of Vietnamese",
-    timeline: "Jan 2023 - March 2023",
+    timeline: "Jan 2023 - Mar 2023",
     description:
       "The application is an educational game designed to improve the Vietnamese language skills of players, arranges words based on shuffled characters.",
-    tags: ["Android", "Kotlin", "Jetpack Compose", "Github Action"],
+    tags: ["Android", "Kotlin", "Jetpack Compose", "Motion Layout"],
     imageUrl: vtvImg,
     videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745639741/King_of_Vietnamese_cimsca.mp4",
   },
   {
     title: "Tizi News",
-    timeline: "March 2021 - June 2021",
+    timeline: "Mar 2021 - Jun 2021",
     description:
       "Channel for buying and selling real estate, jobs, classifieds. Managed and operated by VNCT Investment and Trading Joint Stock Company.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Android", "Java"],
@@ -127,7 +127,7 @@ export const projectsData = [
     timeline: "Sep 2021 - Oct 2021",
     description:
       "A MyJournalImg app will help users easily and intuitively record and manage their trips, while also preserving memorable moments and planning for future journeys.",
-    tags: ["iOS", "SwiftUI", "Github Action", "CoreData"],
+    tags: ["iOS", "SwiftUI", "CoreData"],
     imageUrl: MyJournalImg,
     videoUrl: "",
   },
@@ -136,7 +136,7 @@ export const projectsData = [
     timeline: "Aug 2021 - Oct 2021",
     description:
       "ColorNote is a simple yet powerful note-taking application that allows users to efficiently jot down and organize information.",
-    tags: ["Android", "Kotlin", "Github Action"],
+    tags: ["Android", "Kotlin", "Firebase"],
     imageUrl: colorNoteImg,
     videoUrl: "",
   },

@@ -1,9 +1,13 @@
+'use client';
+
+import { useTheme } from '@/context/theme-context';
 import Script from 'next/script';
 
 export default function BackgroundComponent({children}: {children: React.ReactNode}) {
+  const { theme } = useTheme();
   return (
     <div className="canvas-wrap">
-      <div className="canvas-content">
+      <div className={`canvas-content ${theme === 'dark' ? 'dark' : ''}`}>
         {children}
       </div>
     <div id="canvas"></div>
