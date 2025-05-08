@@ -55,7 +55,7 @@ export default function Member({
             />
             <h3 className={`${epilogueFont.className} text-lg font-semibold mb-4`}>{title}</h3>
             </div>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 text-xs sm:text-sm">
+          <p className="mt-2 leading-relaxed text-black dark:text-white/80 text-xs sm:text-sm">
             {description}
           </p>
 
@@ -70,7 +70,7 @@ export default function Member({
                 }}
               >
                 <Image
-                  className="m-1 w-8 h-8 rounded-full bg-white dark:bg-gray-600"
+                  className="m-1 w-8 rounded-full bg-white dark:bg-gray-600"
                   src={tag}
                   alt={`Tag ${index}`}
                 />

@@ -62,7 +62,7 @@ export default function Project({
           <p className="font-bold mt-2 leading-relaxed text-gray-900 dark:text-white/90 text-xs">
             {timeline}
           </p>
-          <p className="mt-2 leading-relaxed text-gray-900 dark:text-white/60 text-xs sm:text-sm">
+          <p className="mt-2 leading-relaxed text-gray-900 dark:text-white/80 text-xs sm:text-sm">
             {description}
           </p>
           <ul className="flex flex-wrap mt-4 gap-1 sm:mt-auto">

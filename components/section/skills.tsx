@@ -66,7 +66,7 @@ export default function Skills() {
                 
               </div>
               
-              <div className="px-6 pb-6 text-left text-gray-600 dark:text-gray-300 flex-grow text-sm">
+              <div className="px-6 pb-6 text-left text-black dark:text-white/80 flex-grow text-sm">
                 <p>{skill.description || `Professional ${skill.title} services tailored to your business needs.`}</p>
               </div>
               

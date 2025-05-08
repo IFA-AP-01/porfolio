@@ -22,6 +22,7 @@ export default function ThemeSwitch() {
       className="sm:hidden fixed top-5 right-5 sm:bottom-5 sm:bottom-auto bg-white w-[3rem] h-[3rem] shadow-lg  backdrop-blur-[0.5rem] bg-opacity-80 backdrop-blur-[0.5rem] shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
       onClick={toggleTheme}
       style={{ WebkitTapHighlightColor: "transparent" }}
+      aria-label="Toggle theme"
     >
       {theme === "light" ? <BsSun /> : <BsMoon />}
     </button>
