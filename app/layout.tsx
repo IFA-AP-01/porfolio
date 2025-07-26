@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#faf8f1" />
         <title>IFA Team - Application Development Experts</title>
@@ -41,6 +41,7 @@ export default function RootLayout({
         />
       </head>
       <body
+        suppressHydrationWarning
         className={`${interFont.className} bg-[#faf8f1] text-gray-950 relative dark:bg-[#131313] dark:text-gray-50 dark:text-opacity-90 transition-colors duration-300`}
       >
         <div className="bg-gradient-to-r from-[#fa82d8] to-[#6297f0] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:from-[#873f20] dark:to-[#000000] transition-colors duration-300"></div>
