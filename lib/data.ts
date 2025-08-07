@@ -66,7 +66,7 @@ export const projectsData = [
       "Discover Livespeaker, the innovative voice translation tool that facilitates multilingual communication.",
     tags: ["Kotlin", "KMP", "Firebase", "Deepgram", "Gemini"],
     imageUrl: liveSpeakerImg,
-    videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745943450/Live_Speaker_i2aihw.mp4",
+    videoUrl: "https://cdn.ifateam.dev/OhaioLiveSpeaker.mp4",
   },
   {
     title: "Aardwolf India",
@@ -75,7 +75,7 @@ export const projectsData = [
       "Aardwolf manufactures material handling equipment for the stone, glass and metal industries. ",
     tags: ["Wordpress", "PHP", "Elementor", "Woocomerce", "Custom Plugin", "Custom Theme"],
     imageUrl: "",
-    videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745602203/aardwolf-india_ibetbw.mp4",
+    videoUrl: "https://cdn.ifateam.dev/Aardwolf.mp4",
   },
   {
     title: "Stone Fabbers",
@@ -93,7 +93,7 @@ export const projectsData = [
       "A lightweight application designed to monitor the battery status of a device, providing real-time updates on battery health.",
     tags: ["Android", "Kotlin", "Jetpack Compose", "Glance Widget", "Dynamic Color", "Jetpack Library"],
     imageUrl: tiziImg,
-    videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745601050/battery-meter_bff18q.mp4",
+    videoUrl: "https://cdn.ifateam.dev/battery.mp4",
   },
   {
     title: "King Of Vietnamese",
@@ -102,7 +102,7 @@ export const projectsData = [
       "The application is an educational game designed to improve the Vietnamese language skills of players, arranges words based on shuffled characters.",
     tags: ["Android", "Kotlin", "Jetpack Compose", "Motion Layout"],
     imageUrl: vtvImg,
-    videoUrl: "https://res.cloudinary.com/huyhunhngc/video/upload/v1745639741/King_of_Vietnamese_cimsca.mp4",
+    videoUrl: "https://cdn.ifateam.dev/King%20of%20Vietnamese.mp4",
   },
   {
     title: "Tizi News",
