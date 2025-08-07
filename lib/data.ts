@@ -60,6 +60,15 @@ export const links = [
 
 export const projectsData = [
   {
+    title: "snapbyte.io",
+    timeline: "June 2025 - Present",
+    description:
+      "Snapbyte is a file & object caching system designed to help website owners cut bandwidth costs by caching and offloading large files to a globally distributed edge layer.",
+    tags: ["Node.js", "Next.js", "Astro", "Clouldflare", "Redis"],
+    imageUrl: liveSpeakerImg,
+    videoUrl: "https://cdn.ifateam.dev/snapbyte.mp4",
+  },
+  {
     title: "Live Speaker",
     timeline: "Jan 2025 - Present",
     description:
