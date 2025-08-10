@@ -33,9 +33,9 @@ export default function Contact() {
         Please contact us directly at{" "}
         <a
           className="font-bold text-primary dark:text-primary/80 hover:underline"
-          href="mailto:ifa.mobileteam@gmail.com"
+          href="mailto:hi@ifateam.dev"
         >
-          ifa.mobileteam@gmail.com
+          hi@ifateam.dev
         </a>{" "}
         or through this form.
       </p>
