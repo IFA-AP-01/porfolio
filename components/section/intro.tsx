@@ -17,6 +17,7 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import Typewriter from "typewriter-effect";
 import ProfileImage from "../card/profile";
 import { headlineFont } from "@/lib/fontawesome";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -47,14 +48,23 @@ export default function Intro() {
         transition={{ delay: 0.1 }}
         className="mt-8 space-y-2"
       >
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-          <span className="text-black/80 dark:text-white">
-            <span className="relative">
-              <span className={`${headlineFont.className} relative z-10`}>Hi, we're IFA Team 👋</span>
-              <span className="absolute bottom-0 left-0 w-full h-3 bg-primary/20 dark:bg-primary/20 -z-10 transform -rotate-1"></span>
+        
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-center">
+        <span className="text-black/80 dark:text-white">
+          <span className="relative inline-flex items-center gap-2">
+            <span className={`${headlineFont.className} relative z-10 mt-4 sm:mt-6`}>
+              Hi, we're IFA Team
             </span>
+            <DotLottieReact 
+              src="hand_wave.lottie" 
+              loop 
+              autoplay 
+              style={{ width: 40, height: 40 }}
+              className="w-10 h-10 sm:w-[60px] sm:h-[60px]"
+            />
           </span>
-        </h1>
+        </span>
+      </h1>
         <p className={`${headlineFont.className} text-gray-700 dark:text-gray-200 flex items-center justify-center gap-2 text-lg`}>
           <FaMapMarkerAlt className="text-tertiary dark:text-primary " /> Danang, Vietnam
         </p>
@@ -107,25 +117,16 @@ export default function Intro() {
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
           >
-            {/* True Glass card - Very transparent */}
             <div className="glass-card relative overflow-hidden rounded-2xl backdrop-blur-md border transition-all duration-300 hover:backdrop-blur-lg group-hover:border-white/40 dark:group-hover:border-white/20">
-
-              {/* Ultra subtle gradient overlay - barely visible */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 dark:from-white/5 dark:via-transparent dark:to-white/5" />
-
-              {/* Subtle inner highlight */}
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent dark:via-white/10" />
 
-              {/* Content */}
               <div className="relative z-10 flex flex-col items-center justify-center p-6 sm:p-8 min-h-[120px] sm:min-h-[140px]">
-                {/* Icon with subtle glow */}
                 <div className="relative mb-3 sm:mb-4">
                   <div className="text-primary group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] transition-all duration-300 transform group-hover:scale-105">
                     {service.icon}
                   </div>
                 </div>
-
-                {/* Text - contrasted for readability */}
                 <span className="text-sm sm:text-base font-medium text-gray-800 dark:text-gray-100 text-center leading-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] dark:drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
                   {service.text}
                 </span>
@@ -134,6 +135,7 @@ export default function Intro() {
           </motion.div>
         ))}
       </motion.div>
+      
       {/* CTA Button */}
       <motion.div
         className="flex flex-col items-center justify-center gap-3 px-4 font-medium"

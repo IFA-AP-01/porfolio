@@ -97,7 +97,7 @@ export const projectsData = [
     tags: ["Wordpress", "PHP", "Flatsome", "Custom Plugin", "Custom Theme"],
     imageUrl: stoneFabberImg,
     videoUrl: "",
-    viewUrl: "https://stonefabbers.com",
+    viewUrl: "https://stonefabber.com",
   },
   {
     title: "Battery Meter",
