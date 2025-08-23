@@ -1,17 +1,16 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import { Inter } from "next/font/google";
-import { Epilogue } from "next/font/google";
+import { DM_Sans, Josefin_Sans } from "next/font/google";
 
 library.add(fas);
-export const interFont = Inter({
+export const bodyFont = DM_Sans({
     weight: ["400", "700"],
     style: ["normal", "italic"],
     subsets: ["latin"],
     display: "swap",
 });
 
-export const epilogueFont = Epilogue({
+export const headlineFont = Josefin_Sans({
     weight: ["400", "700"],
     style: ["normal", "italic"],
     subsets: ["latin"],

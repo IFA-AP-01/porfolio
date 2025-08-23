@@ -34,6 +34,8 @@ import {
   SiSpring,
   SiNestjs
 } from "react-icons/si";
+import { headlineFont } from "@/lib/fontawesome";
+
 const skillIcons: { [key: string]: JSX.Element } = {
   Android: <SiAndroid />,
   iOS: <SiApple />,
@@ -92,11 +94,11 @@ export default function About() {
     >
       <SectionHeading highlight="About">About</SectionHeading>
       <p className="mb-3"></p>
-      <h3 className="font-bold text-sm sm:text-md text-center">
+      <h3 className={`${headlineFont.className} font-bold text-lg sm:text-md text-center`}>
         💥 Welcome! We are a dedicated team specializing in developing
         high-quality applications and solutions across various platforms. 😊😊
       </h3>{" "}
-      <ul className="mt-8 list-disc text-sm text-gray-800 dark:text-white/80">
+      <ul className="mt-8 list-disc text-md text-gray-800 dark:text-white/80">
         <li>
           We are developers with 5 years of experience in developing
           applications on Android, iOS, Flutter, and websites. We have
@@ -112,7 +114,7 @@ export default function About() {
           and always experimenting with personal projects.
         </li>
       </ul>
-      <h3 className="font-bold mt-8 text-sm sm:text-md">
+      <h3 className={`${headlineFont.className} font-bold mt-8 text-lg sm:text-md`}>
         The technologies we used
       </h3>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800 mt-4">

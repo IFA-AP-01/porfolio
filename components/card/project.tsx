@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { epilogueFont } from "@/lib/fontawesome";
+import { headlineFont } from "@/lib/fontawesome";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -15,6 +15,7 @@ export default function Project({
   tags,
   imageUrl,
   videoUrl,
+  viewUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -58,13 +59,33 @@ export default function Project({
         )}
 
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[40%] flex flex-col h-full sm:group-even:ml-[28rem]">
-          <h3 className={`${epilogueFont.className} text-md sm:text-xl font-semibold text-gray-900 dark:text-white/90`}>{title}</h3>
+          <h3 className={`${headlineFont.className} text-md sm:text-xl font-semibold text-gray-900 dark:text-white/90`}>{title}</h3>
           <p className="font-bold mt-2 leading-relaxed text-gray-900 dark:text-white/90 text-xs">
             {timeline}
           </p>
           <p className="mt-2 leading-relaxed text-gray-900 dark:text-white/80 text-xs sm:text-sm">
             {description}
           </p>
+            {viewUrl && (
+            <a
+              href={viewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm font-semibold text-primary flex items-center gap-1"
+            >
+              <span>Explore</span>
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+              >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            )}
           <ul className="flex flex-wrap mt-4 gap-1 sm:mt-auto">
             {tags.map((tag, index) => (
               <li

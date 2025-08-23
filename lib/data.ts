@@ -67,6 +67,7 @@ export const projectsData = [
     tags: ["Node.js", "Next.js", "Astro", "Clouldflare", "Redis"],
     imageUrl: liveSpeakerImg,
     videoUrl: "https://cdn.ifateam.dev/snapbyte.mp4",
+    viewUrl: "https://snapbyte.io",
   },
   {
     title: "Live Speaker",
@@ -76,6 +77,7 @@ export const projectsData = [
     tags: ["Kotlin", "KMP", "Firebase", "Deepgram", "Gemini"],
     imageUrl: liveSpeakerImg,
     videoUrl: "https://cdn.ifateam.dev/OhaioLiveSpeaker.mp4",
+    viewUrl: "https://speaker.ohaio.io",
   },
   {
     title: "Aardwolf India",
@@ -85,6 +87,7 @@ export const projectsData = [
     tags: ["Wordpress", "PHP", "Elementor", "Woocomerce", "Custom Plugin", "Custom Theme"],
     imageUrl: "",
     videoUrl: "https://cdn.ifateam.dev/Aardwolf.mp4",
+    viewUrl: "https://aardwolf.co.in",
   },
   {
     title: "Stone Fabbers",
@@ -94,6 +97,7 @@ export const projectsData = [
     tags: ["Wordpress", "PHP", "Flatsome", "Custom Plugin", "Custom Theme"],
     imageUrl: stoneFabberImg,
     videoUrl: "",
+    viewUrl: "https://stonefabbers.com",
   },
   {
     title: "Battery Meter",
@@ -103,6 +107,7 @@ export const projectsData = [
     tags: ["Android", "Kotlin", "Jetpack Compose", "Glance Widget", "Dynamic Color", "Jetpack Library"],
     imageUrl: tiziImg,
     videoUrl: "https://cdn.ifateam.dev/battery.mp4",
+    viewUrl: "https://play.google.com/store/apps/details?id=io.github.ifa.glancewidget",
   },
   {
     title: "King Of Vietnamese",
@@ -112,6 +117,7 @@ export const projectsData = [
     tags: ["Android", "Kotlin", "Jetpack Compose", "Motion Layout"],
     imageUrl: vtvImg,
     videoUrl: "https://cdn.ifateam.dev/King%20of%20Vietnamese.mp4",
+    viewUrl: "https://play.google.com/store/apps/details?id=com.dunghn2201.vuatiengviet_kov",
   },
   {
     title: "Tizi News",
@@ -121,6 +127,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Android", "Java"],
     imageUrl: tiziImg,
     videoUrl: "",
+    viewUrl: "",
   },
   {
     title: "Task Management",
@@ -130,6 +137,7 @@ export const projectsData = [
     tags: ["iOS", "SwiftUI", "Github Action", "CoreData"],
     imageUrl: taskManagementImg,
     videoUrl: "",
+    viewUrl: "",
   },
   {
     title: "My Journal",
@@ -139,6 +147,7 @@ export const projectsData = [
     tags: ["iOS", "SwiftUI", "CoreData"],
     imageUrl: MyJournalImg,
     videoUrl: "",
+    viewUrl: "",
   },
   {
     title: "ColorNote",
@@ -148,6 +157,7 @@ export const projectsData = [
     tags: ["Android", "Kotlin", "Firebase"],
     imageUrl: colorNoteImg,
     videoUrl: "",
+    viewUrl: "",
   },
 ] as const;
 
@@ -220,10 +230,10 @@ export const skillsJob = [
     tags: ["React", "Next.js", "Node.js", "NestJs", "Vue", "WordPress"],
   },
   {
-    title: "UI/UX Design",
+    title: "AI Integration",
     imageUrl: uiuxDesignImg,
     description: "",
-    tags: ["Figma", "Canva"],
+    tags: ["Chatbot", "RAG", "Object Detection", "ML Kit", "Vertex AI", "Cloudflare Workers AI"],
   },
   {
     title: "SEO Optimization",

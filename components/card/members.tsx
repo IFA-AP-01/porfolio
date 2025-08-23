@@ -1,103 +1,137 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState, useCallback, memo } from "react";
 import { membersData } from "@/lib/data";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { epilogueFont } from "@/lib/fontawesome";
+import { motion } from "framer-motion";
+import { headlineFont } from "@/lib/fontawesome";
 
 type MemberProps = (typeof membersData)[number];
 
-export default function Member({
+const Member = memo(function Member({
   title,
   description,
   tags,
   imageUrl,
 }: MemberProps) {
   const [isHovered, setIsHovered] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  const handleMouseEnter = useCallback(() => setIsHovered(true), []);
+  const handleMouseLeave = useCallback(() => setIsHovered(false), []);
 
   return (
     <motion.div
-      ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
+      className="group mb-6 sm:mb-8 last:mb-0 relative"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ 
+        opacity: 1, 
+        y: 0,
+        transition: { duration: 0.6, ease: "easeOut" }
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      whileHover={{ 
-        y: -8,
-        transition: { duration: 0.3 }
-      }}
+      viewport={{ once: true, margin: "-100px" }}
     >
-      <section className="flex flex-row items-center bg-white max-w-[50rem] rounded-lg overflow-hidden sm:pr-8 relative sm:h-[15rem] hover:bg-gray-50 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <motion.div 
-          className="pt-4 pb-7 px-5 sm:pl-8 sm:pr-2 sm:pt-8 sm:max-w-[70%] flex flex-col h-full"
-          animate={{
-            x: isHovered ? 4 : 0
-          }}
-          transition={{ duration: 0.4 }}
-        >
-            <h3 className={`${epilogueFont.className} text-xl font-semibold hidden sm:block`}>{title}</h3>
-            <div className="block sm:hidden flex items-center gap-4 mt-2">
-            <Image
-              className="w-[4rem] h-[4rem] mb-4 rounded-full shadow-md dark:ring-gray-500 object-cover"
-              src={imageUrl}
-              alt="Bordered avatar"
-            />
-            <h3 className={`${epilogueFont.className} text-lg font-semibold mb-4`}>{title}</h3>
-            </div>
-          <p className="mt-2 leading-relaxed text-black dark:text-white/80 text-xs sm:text-sm">
-            {description}
-          </p>
+      {/* Simplified background glow - only show on hover */}
+      {isHovered && (
+        <div className="absolute -inset-2 bg-orange-500/5 rounded-3xl opacity-100 transition-opacity duration-300" />
+      )}
+      
+      <motion.section 
+        className="glass-member relative bg-white/20 dark:bg-white/5 border border-white/30 dark:border-white/10 rounded-3xl overflow-hidden max-w-[50rem] transition-all duration-300 hover:bg-white/30 dark:hover:bg-white/10 hover:border-white/50 dark:hover:border-white/20"
+        whileHover={{ 
+          y: -4,
+          transition: { duration: 0.2, ease: "easeOut" }
+        }}
+      >
+        {/* Simplified top highlight */}
+        <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-white/40 dark:via-white/30 to-transparent" />
+        
+        <div className="flex flex-row items-center sm:h-[16rem] relative z-10">
+          {/* Content Section */}
+          <motion.div 
+            className="pt-6 pb-6 px-6 sm:pl-8 sm:pr-4 sm:pt-8 sm:max-w-[70%] flex flex-col h-full relative"
+            animate={{
+              x: isHovered ? 4 : 0
+            }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            {/* Desktop Title */}
+            <motion.h3 
+              className={`${headlineFont.className} text-xl font-bold hidden sm:block text-gray-900 dark:text-white mb-1`}
+            >
+              {title}
+            </motion.h3>
 
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto -space-x-6">
-            {tags.map((tag, index) => (
-              <motion.li 
-                key={index} 
-                className="transition hover:scale-[1.1]"
-                animate={{ 
-                  y: isHovered ? index % 2 === 0 ? -4 : -2 : 0,
-                  transition: { delay: index * 0.05, duration: 0.3 }
-                }}
+            {/* Mobile Layout */}
+            <div className="flex sm:hidden items-center gap-4 mb-4">
+              <motion.div
+                className="relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
                 <Image
-                  className="m-1 w-8 rounded-full bg-white dark:bg-gray-600"
-                  src={tag}
-                  alt={`Tag ${index}`}
+                  className="relative w-[4rem] h-[4rem] rounded-2xl shadow-lg object-cover ring-2 ring-white/20 dark:ring-white/10"
+                  src={imageUrl}
+                  alt="Profile"
+                  loading="lazy"
                 />
-              </motion.li>
-            ))}
-          </ul>
-        </motion.div>
+              </motion.div>
+              <h3 className={`${headlineFont.className} text-lg font-bold text-gray-900 dark:text-white`}>
+                {title}
+              </h3>
+            </div>
 
-        <motion.div
-          className="absolute hidden sm:block right-10 my-auto"
-          animate={{
-            scale: isHovered ? 1.08 : 1,
-            rotate: isHovered ? 5 : 0
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 20
-          }}
-        >
-          <Image
-            className="w-[8rem] h-[8rem] object-cover transition-all hover:scale-[1.15] rounded-full shadow-md dark:ring-gray-500 my-auto"
-            src={imageUrl}
-            alt="Bordered avatar"
-          />
-        </motion.div>
-      </section>
+            {/* Description */}
+            <p className="leading-relaxed text-gray-800 dark:text-gray-300 text-sm sm:text-base mb-6 sm:mb-auto">
+              {description}
+            </p>
+
+            {/* Tech Stack Pills - Simplified */}
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {tags.map((tag, index) => (
+                <div
+                  key={index}
+                  className="bg-white/30 dark:bg-white/10 border border-white/40 dark:border-white/15 rounded-xl p-2 hover:bg-white/40 dark:hover:bg-white/15 transition-colors duration-200"
+                >
+                  <Image
+                    className="w-8 h-8 rounded-lg object-cover"
+                    src={tag}
+                    alt={`Tech ${index}`}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Desktop Profile Image - Simplified */}
+          <div className="hidden sm:block absolute right-8 top-1/2 transform -translate-y-1/2">
+            <motion.div
+              className="relative"
+              animate={{
+                scale: isHovered ? 1.03 : 1
+              }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+            >
+              {/* Profile image container */}
+              <div className="bg-white/30 dark:bg-white/10 border-2 border-white/40 dark:border-white/15 rounded-2xl p-1">
+                <Image
+                  className="w-[8.5rem] h-[8.5rem] object-cover rounded-xl shadow-lg"
+                  src={imageUrl}
+                  alt="Profile"
+                  loading="lazy"
+                />
+              </div>
+              
+              {/* Status dot */}
+              <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white dark:border-gray-800 shadow-md" />
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
     </motion.div>
   );
-}
+});
+
+export default Member;

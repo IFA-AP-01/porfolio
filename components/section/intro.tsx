@@ -4,20 +4,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsDiscord } from "react-icons/bs";
-import { FaGithubSquare, FaPhone } from "react-icons/fa";
+import { FaGithubSquare, FaPhone, FaRobot } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
 import {
   FaMapMarkerAlt,
   FaMobile,
   FaLaptopCode,
-  FaCode,
   FaSearch,
 } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import Typewriter from "typewriter-effect";
 import ProfileImage from "../card/profile";
-import { epilogueFont } from "@/lib/fontawesome";
+import { headlineFont } from "@/lib/fontawesome";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -51,13 +50,13 @@ export default function Intro() {
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
           <span className="text-black/80 dark:text-white">
             <span className="relative">
-                <span className={`${epilogueFont.className} relative z-10`}>Hi, we're IFA Team 👋</span>
+              <span className={`${headlineFont.className} relative z-10`}>Hi, we're IFA Team 👋</span>
               <span className="absolute bottom-0 left-0 w-full h-3 bg-primary/20 dark:bg-primary/20 -z-10 transform -rotate-1"></span>
             </span>
           </span>
         </h1>
-        <p className="text-gray-700 dark:text-gray-200 flex items-center justify-center gap-2 text-lg">
-          <FaMapMarkerAlt className="text-tertiary dark:text-primary "/> Danang, Vietnam
+        <p className={`${headlineFont.className} text-gray-700 dark:text-gray-200 flex items-center justify-center gap-2 text-lg`}>
+          <FaMapMarkerAlt className="text-tertiary dark:text-primary " /> Danang, Vietnam
         </p>
       </motion.div>
 
@@ -69,7 +68,7 @@ export default function Intro() {
         transition={{ delay: 0.2 }}
       >
         <h2
-          className={`${epilogueFont.className} text-sm sm:text-xl !leading-relaxed font-medium text-gray-700 dark:text-gray-200`}
+          className={`${headlineFont.className} text-sm sm:text-xl !leading-relaxed font-medium text-gray-700 dark:text-gray-200`}
         >
           <Typewriter
             options={{
@@ -87,9 +86,8 @@ export default function Intro() {
         </h2>
       </motion.div>
 
-      {/* Services Highlights */}
       <motion.div
-        className="grid grid-cols-4 sm:grid-cols-4 gap-3 px-4 mb-20 sm:mb-12"
+        className="grid grid-cols-2 sm:grid-cols-4 gap-4 px-4 mb-20 sm:mb-12"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
@@ -97,18 +95,43 @@ export default function Intro() {
         {[
           { icon: <FaMobile className="text-xl" />, text: "Mobile Apps" },
           { icon: <FaLaptopCode className="text-xl" />, text: "Web Solutions" },
-          { icon: <FaCode className="text-xl" />, text: "UX/UI" },
+          { icon: <FaRobot className="text-xl" />, text: "AI Integration" },
           { icon: <FaSearch className="text-xl" />, text: "SEO Optimize" },
         ].map((service, index) => (
-          <div
+          <motion.div
             key={index}
-            className="backdrop-blur-[0.5rem] flex flex-col items-center p-3 rounded-lg bg-white/50 dark:bg-white/10 shadow-sm hover:shadow-md transition-all"
+            className="group relative"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4 + index * 0.1 }}
+            whileHover={{ scale: 1.02, y: -2 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <div className="text-primary sm:mb-2">{service.icon}</div>
-            <span className="text-sm font-medium text-primary hidden sm:block">
-              {service.text}
-            </span>
-          </div>
+            {/* True Glass card - Very transparent */}
+            <div className="glass-card relative overflow-hidden rounded-2xl backdrop-blur-md border transition-all duration-300 hover:backdrop-blur-lg group-hover:border-white/40 dark:group-hover:border-white/20">
+
+              {/* Ultra subtle gradient overlay - barely visible */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 dark:from-white/5 dark:via-transparent dark:to-white/5" />
+
+              {/* Subtle inner highlight */}
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent dark:via-white/10" />
+
+              {/* Content */}
+              <div className="relative z-10 flex flex-col items-center justify-center p-6 sm:p-8 min-h-[120px] sm:min-h-[140px]">
+                {/* Icon with subtle glow */}
+                <div className="relative mb-3 sm:mb-4">
+                  <div className="text-primary group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] transition-all duration-300 transform group-hover:scale-105">
+                    {service.icon}
+                  </div>
+                </div>
+
+                {/* Text - contrasted for readability */}
+                <span className="text-sm sm:text-base font-medium text-gray-800 dark:text-gray-100 text-center leading-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] dark:drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+                  {service.text}
+                </span>
+              </div>
+            </div>
+          </motion.div>
         ))}
       </motion.div>
       {/* CTA Button */}
