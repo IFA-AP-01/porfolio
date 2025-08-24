@@ -60,7 +60,7 @@ export default function Intro() {
                 loop
                 autoplay
                 style={{ width: 40, height: 40 }}
-                className="w-10 h-10 sm:w-[60px] sm:h-[60px]"
+                className="w-10 h-10 sm:w-[60px] sm:h-[60px] sm:mb-4 mb-2"
               />
             </span>
           </span>

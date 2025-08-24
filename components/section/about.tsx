@@ -102,7 +102,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-16 sm:mb-28 max-w-[45rem] leading-8 sm:leading-8 scroll-mt-28 mx-4 sm:mx-[16px] flex flex-col items-center justify-center px-2 sm:px-0"
+      className="mb-16 sm:mb-28 max-w-[50rem] leading-8 sm:leading-8 scroll-mt-28 sm:mx-[16px] flex flex-col items-center justify-center"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -111,8 +111,7 @@ export default function About() {
       <SectionHeading highlight="About">About</SectionHeading>
       <p className="mb-3"></p>
       <h3 className={`${headlineFont.className} font-bold text-base sm:text-lg text-center px-2 sm:px-0`}>
-        💥 Welcome! We are a dedicated team specializing in developing
-        high-quality applications and solutions across various platforms.
+        💥 Welcome! We build high-quality apps and solutions for multiple platforms.
       </h3>
 
       {/* Mobile-Optimized About Cards */}
@@ -124,9 +123,9 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="flex-shrink-0 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-blue-200 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-lg">
-               <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl overflow-hidden p-2">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-blue-200 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-lg">
+               <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl overflow-hidden p-2">
                   <DotLottieReact 
                     src="coder.lottie" 
                     loop 
@@ -151,9 +150,9 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="flex-shrink-0 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-green-200 to-teal-600 rounded-lg sm:rounded-xl flex items-center justify-center text-white text-xl">
-                <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl overflow-hidden p-2">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-green-200 to-teal-600 rounded-lg sm:rounded-xl flex items-center justify-center text-white text-xl">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl overflow-hidden p-2">
                   <DotLottieReact 
                     src="handshake.lottie" 
                     loop 
@@ -179,9 +178,9 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="flex-shrink-0 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-orange-200 to-red-500 rounded-lg sm:rounded-xl flex items-center justify-center text-white text-xl overflow-hidden">
-                <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl overflow-hidden">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-orange-200 to-red-500 rounded-lg sm:rounded-xl flex items-center justify-center text-white text-xl overflow-hidden">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl overflow-hidden">
                   <DotLottieReact 
                     src="spaceship.lottie" 
                     loop 
