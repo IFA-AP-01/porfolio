@@ -92,7 +92,7 @@ const Member = memo(function Member({
               {tags.map((tag, index) => (
                 <div
                   key={index}
-                  className="bg-white/30 dark:bg-white/10 border border-white/40 dark:border-white/15 rounded-xl p-2 hover:bg-white/40 dark:hover:bg-white/15 transition-colors duration-200"
+                  className="bg-black/10 dark:bg-white/10 rounded-xl p-2 hover:bg-white/40 dark:hover:bg-white/15 transition-colors duration-200"
                 >
                   <Image
                     className="w-8 h-8 rounded-lg object-cover"
@@ -115,7 +115,7 @@ const Member = memo(function Member({
               transition={{ duration: 0.2, ease: "easeOut" }}
             >
               {/* Profile image container */}
-              <div className="bg-white/30 dark:bg-white/10 border-2 border-white/40 dark:border-white/15 rounded-2xl p-1">
+              <div className="bg-white/30 dark:bg-white/10 rounded-2xl p-1">
                 <Image
                   className="w-[8.5rem] h-[8.5rem] object-cover rounded-xl shadow-lg"
                   src={imageUrl}
@@ -123,9 +123,6 @@ const Member = memo(function Member({
                   loading="lazy"
                 />
               </div>
-              
-              {/* Status dot */}
-              <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white dark:border-gray-800 shadow-md" />
             </motion.div>
           </div>
         </div>

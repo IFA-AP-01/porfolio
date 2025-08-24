@@ -27,77 +27,51 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="pt-28 sm:pt-36 mb-20 max-w-[60rem] text-center sm:mb-0 scroll-mt-[90rem]"
+      className="pt-12 sm:pt-24 mb-16 max-w-[60rem] text-center sm:mb-0 scroll-mt-[90rem]"
     >
       {/* Hero Image with Animation */}
-      <motion.div
+      <div
         className="flex items-center justify-center"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 100 }}
       >
-        <div className="relative">
-          <ProfileImage />
-        </div>
-      </motion.div>
+        <DotLottieReact
+          src="window_layout.lottie"
+          loop
+          autoplay
+          className="w-80 h-80"
+        />
+      </div>
 
       {/* Team Name & Tagline */}
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="mt-8 space-y-2"
+        className="space-y-2"
       >
-        
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-center">
-        <span className="text-black/80 dark:text-white">
-          <span className="relative inline-flex items-center gap-2">
-            <span className={`${headlineFont.className} relative z-10 mt-4 sm:mt-6`}>
-              Hi, we're IFA Team
+
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-center">
+          <span className="text-black/80 dark:text-white">
+            <span className="relative inline-flex items-center gap-2">
+              <span className={`${headlineFont.className} relative z-10`}>
+                Hi, we're IFA Team
+              </span>
+              <DotLottieReact
+                src="hand_wave.lottie"
+                loop
+                autoplay
+                style={{ width: 40, height: 40 }}
+                className="w-10 h-10 sm:w-[60px] sm:h-[60px]"
+              />
             </span>
-            <DotLottieReact 
-              src="hand_wave.lottie" 
-              loop 
-              autoplay 
-              style={{ width: 40, height: 40 }}
-              className="w-10 h-10 sm:w-[60px] sm:h-[60px]"
-            />
           </span>
-        </span>
-      </h1>
+        </h1>
         <p className={`${headlineFont.className} text-gray-700 dark:text-gray-200 flex items-center justify-center gap-2 text-lg`}>
           <FaMapMarkerAlt className="text-tertiary dark:text-primary " /> Danang, Vietnam
         </p>
       </motion.div>
 
-      {/* Dynamic Headline */}
       <motion.div
-        className="mb-6 mt-12 px-4"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-      >
-        <h2
-          className={`${headlineFont.className} text-sm sm:text-xl !leading-relaxed font-medium text-gray-700 dark:text-gray-200`}
-        >
-          <Typewriter
-            options={{
-              strings: [
-                "Crafting Code, Shaping Futures.",
-                "Mobile Expertise, Limitless Solutions.",
-                "Apps that Power Web & Mobile Worlds.",
-              ],
-              autoStart: true,
-              loop: true,
-              delay: 40,
-              deleteSpeed: 20,
-            }}
-          />
-        </h2>
-      </motion.div>
-
-      <motion.div
-        className="grid grid-cols-2 sm:grid-cols-4 gap-4 px-4 mb-20 sm:mb-12"
+        className="pt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 px-4 mb-12"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
@@ -121,7 +95,7 @@ export default function Intro() {
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 dark:from-white/5 dark:via-transparent dark:to-white/5" />
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent dark:via-white/10" />
 
-              <div className="relative z-10 flex flex-col items-center justify-center p-6 sm:p-8 min-h-[120px] sm:min-h-[140px]">
+              <div className="relative z-10 flex flex-col items-center justify-center p-2 sm:p-8 min-h-[90px] sm:min-h-[90px]">
                 <div className="relative mb-3 sm:mb-4">
                   <div className="text-primary group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] transition-all duration-300 transform group-hover:scale-105">
                     {service.icon}
@@ -135,7 +109,7 @@ export default function Intro() {
           </motion.div>
         ))}
       </motion.div>
-      
+
       {/* CTA Button */}
       <motion.div
         className="flex flex-col items-center justify-center gap-3 px-4 font-medium"

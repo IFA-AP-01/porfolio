@@ -126,9 +126,9 @@ export default function About() {
           >
             <div className="flex items-start gap-3 sm:gap-4">
               <div className="flex-shrink-0 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-blue-200 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-lg">
-               <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl overflow-hidden">
+               <div className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl overflow-hidden p-2">
                   <DotLottieReact 
-                    src="window_layout.lottie" 
+                    src="coder.lottie" 
                     loop 
                     autoplay 
                     className="w-full h-full"
