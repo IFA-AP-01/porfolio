@@ -38,7 +38,7 @@ const Member = memo(function Member({
       )}
       
       <motion.section 
-        className="glass-member relative bg-white/20 dark:bg-white/5 border border-white/30 dark:border-white/10 rounded-3xl overflow-hidden max-w-[50rem] transition-all duration-300 hover:bg-white/30 dark:hover:bg-white/10 hover:border-white/50 dark:hover:border-white/20"
+        className="glass-member relative bg-white/20 dark:bg-white/5 rounded-3xl overflow-hidden max-w-[50rem] transition-all duration-300 hover:bg-white/30 dark:hover:bg-white/10 hover:border-white/50 dark:hover:border-white/20"
         whileHover={{ 
           y: -4,
           transition: { duration: 0.2, ease: "easeOut" }

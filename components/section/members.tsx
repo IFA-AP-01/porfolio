@@ -15,7 +15,7 @@ export default function Members() {
   return (
     <section ref={ref} id="members" className="scroll-mt-28 mb-28">
       <SectionHeading highlight="Members">Members</SectionHeading>
-      <p className="text-gray-700 mb-8 dark:text-white/80 max-w-[36rem] text-center mx-auto text-sm sm:text-md">
+      <p className="text-gray-700 mb-8 dark:text-white/80 max-w-[36rem] text-center mx-auto text-md font-bold">
         Meet our team of talented developers who are passionate about creating amazing products. 😊
       </p>
       <div className="space-y-4">

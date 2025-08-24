@@ -32,7 +32,7 @@ export default function Skills() {
       className="mb-28 max-w-[75rem] mx-auto scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading highlight="We Do?">What We Do?</SectionHeading>
-      <p className="text-gray-700 mb-8 dark:text-white/80 max-w-[36rem] text-center mx-auto text-sm sm:text-md">
+      <p className="text-gray-700 mb-8 dark:text-white/80 max-w-[36rem] text-center mx-auto text-md font-bold">
         We are a team of experienced developers with a passion for creating high-quality applications and solutions. 
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
