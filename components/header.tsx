@@ -11,11 +11,16 @@ import { useTheme } from "@/context/theme-context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import teamImage from "@/public/logo.webp";
 import { BsMoon, BsSun } from "react-icons/bs";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
   const { theme, toggleTheme } = useTheme();
+  const pathname = usePathname();
+
+  // Hide header on privacy pages
+  const isPrivacyPage = pathname?.startsWith('/privacy');
 
   useEffect(() => {
     const metaThemeColor = document.querySelector("meta[name='theme-color']");
@@ -26,6 +31,11 @@ export default function Header() {
       );
     }
   }, [theme]);
+
+  // Don't render header on privacy pages
+  if (isPrivacyPage) {
+    return null;
+  }
 
   return (
     <header className="z-[999] relative">
